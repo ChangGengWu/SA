@@ -1,4 +1,4 @@
-package com.example.login;
+package com.example.FJU_Store;
 
 public class USER {
     private String Email;

@@ -1,4 +1,4 @@
-package com.example.login;
+package com.example.FJU_Store;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

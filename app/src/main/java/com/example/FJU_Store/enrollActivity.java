@@ -1,4 +1,4 @@
-package com.example.login;
+package com.example.FJU_Store;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

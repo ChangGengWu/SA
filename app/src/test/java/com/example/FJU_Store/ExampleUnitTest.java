@@ -1,4 +1,4 @@
-package com.example.login;
+package com.example.FJU_Store;
 
 import org.junit.Test;
 
