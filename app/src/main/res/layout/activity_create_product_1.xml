@@ -17,6 +17,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="329dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="16dp"
+        android:background="#009688"
+        android:text="下一步"
+        android:textColor="#131213"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <RadioGroup
         android:id="@+id/product_category"
         android:layout_width="wrap_content"
@@ -53,11 +69,4 @@
             android:textSize="24sp" />
     </RadioGroup>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="423dp"
-        android:layout_height="50dp"
-        android:text="下一步"
-        tools:layout_editor_absoluteX="-5dp"
-        tools:layout_editor_absoluteY="553dp" />
 </android.support.constraint.ConstraintLayout>
