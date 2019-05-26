@@ -4,67 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.FJU_Store.create_product_2_furniture">
+    tools:context="com.example.FJU_Store.create_product_2_daily">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:text="請選擇傢具副類別(單選)"
+        android:layout_marginTop="69dp"
+        android:text="請輸入生活用品副類別(單選)"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
-        android:id="@+id/furniture_category"
+        android:id="@+id/daily_category"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.23000002">
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.18">
 
         <RadioButton
-            android:id="@+id/furni_3c"
+            android:id="@+id/daily_shower"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="家電類" />
+            android:text="盆洗用品類" />
 
         <RadioButton
-            android:id="@+id/furni_bed"
+            android:id="@+id/daily_stationary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="床鋪類" />
+            android:text="文具類" />
 
         <RadioButton
-            android:id="@+id/furni_shower"
+            android:id="@+id/daily_makeup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="浴室類" />
+            android:text="化妝品類" />
 
         <RadioButton
-            android:id="@+id/furni_shelf"
+            android:id="@+id/daily_decoration"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="櫃子類" />
+            android:text="裝飾用品類" />
 
         <RadioButton
-            android:id="@+id/furni_table"
+            android:id="@+id/daily_clothes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="桌椅類" />
+            android:text="衣著類" />
 
         <RadioButton
-            android:id="@+id/furni_else"
+            android:id="@+id/daily_else"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -72,33 +72,32 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/button3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="17dp"
         android:background="#DCEDC8"
         android:text="返回編輯"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button7"
+        app:layout_constraintEnd_toStartOf="@+id/button4"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/button4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="17dp"
         android:background="#26A69A"
         android:text="下一步"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button6" />
-
+        app:layout_constraintStart_toEndOf="@+id/button3" />
 </android.support.constraint.ConstraintLayout>
