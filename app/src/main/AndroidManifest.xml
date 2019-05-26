@@ -13,6 +13,17 @@
         android:theme="@style/AppTheme">
         <activity android:name="com.example.FJU_Store.IndexActivity"></activity>
         <activity android:name=".create_product_1" />
+        <activity android:name=".create_product_2_furniture"
+            android:label="輸入商品規範"></activity>
+        <activity
+            android:name=".create_product_2"
+            android:label="輸入商品規範"></activity>
+        <activity
+            android:name=".create_product_makesure"
+            android:label="確認商品資訊" />
+        <activity
+            android:name=".create_product_1"
+            android:label="輸入商品規範" />
         <activity android:name=".loginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
