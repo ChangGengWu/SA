@@ -1,5 +1,6 @@
 package com.example.FJU_Store;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -23,57 +24,63 @@ public class loginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Config.BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        API api = retrofit.create(API.class);
+        Map<String, String> map = new HashMap<>();
+        map.put("api_key", Config.API_KEY);
+        map.put("view", "Grid%20view");
+        map.put("pageSize", "10");
+        final Call<ListRes> call = api.getUser(map);
 
         Button btn_login = findViewById(R.id.login);
+        Button btn_enroll = findViewById(R.id.signup);
+        btn_enroll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toVerify = new Intent(loginActivity.this,verifyActivity.class);
+                startActivity(toVerify);
+            }
+        });
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 EditText email = findViewById(R.id.mail);
-                String mail = email.getText().toString();
-                Toast.makeText(loginActivity.this,"email: " + mail,Toast.LENGTH_LONG).show();
-            }
-        });
-
-                Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl(Config.BASE_URL)
-                        .addConverterFactory(GsonConverterFactory.create())
-                        .build();
-
-                API api = retrofit.create(API.class);
-
-                Map<String, String> map = new HashMap<>();
-
-                map.put("api_key", Config.API_KEY);
-                map.put("view", "Grid%20view");
-                map.put("pageSize", "10");
-
-                Call<ListRes> call = api.getUser(map);
-
-                call.enqueue(new Callback<ListRes>() {
+                EditText password = findViewById(R.id.password);
+                final String mail = email.getText().toString();
+                final String passw = password.getText().toString();
+                call.clone().enqueue(new Callback<ListRes>() {
                     @Override
                     public void onResponse(Call<ListRes> call, Response<ListRes> response) {
                         if (response.isSuccessful()) {
                             ListRes listRes = response.body();
                             List<Res> resList = listRes.records;
+                            int flag = 0;
                             for (Res h : resList) {
-                                String each = h.fields.getEmail();
-                                if (each.equals("406401513@mail.fju.edu.tw")) {
-                                    Log.v("MainActivity", "[EMail] " + each);
-                                }
+                                String acc = h.fields.getEmail();
+                                String pass = h.fields.getUser_password();
+                                //Log.v("MainActivity", "[EMail成功找到] " + acc);
+                                //Log.v("MainActivity", "[EMail成功找到] " + pass);
+                                if(acc.equals(mail) && pass.equals(passw)) flag = 1;
                             }
-                            Log.e("MainActivity", response.raw() + "");
+                            if (flag == 1) Toast.makeText(loginActivity.this,"正確",Toast.LENGTH_LONG).show();
+                            else Toast.makeText(loginActivity.this,"錯誤",Toast.LENGTH_LONG).show();
                         } else {
-                            Log.e("MainActivity", response.code() + "");
-                            Log.e("MainActivity", "Connect Error");
-                            Log.e("MainActivity", response.raw() + "");
+                            Log.e("MainActivity", "連接失敗!");
                         }
                     }
-
                     @Override
                     public void onFailure(Call<ListRes> call, Throwable t) {
                         Log.d("emails", "not connected");
 
                     }
                 });
+            }
+        });
+
+
         }
     }

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class verifyActivity extends AppCompatActivity {
 
@@ -17,8 +18,12 @@ public class verifyActivity extends AppCompatActivity {
         btn_enroll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                EditText email = findViewById(R.id.enroll_email);
+                String getmail = email.getText().toString();
                 Intent intent = new Intent(verifyActivity.this,enrollActivity.class);
+                intent.putExtra("sentMail",getmail);
                 startActivity(intent);
+
             }
         });
     }

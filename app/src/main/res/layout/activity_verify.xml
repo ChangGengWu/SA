@@ -20,7 +20,7 @@
         android:layout_marginTop="50dp">
 
         <EditText
-            android:id="@+id/email"
+            android:id="@+id/enroll_email"
             android:layout_width="250dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
@@ -46,7 +46,7 @@
         android:orientation="vertical"
         android:layout_marginTop="10dp">
         <EditText
-            android:id="@+id/testcode"
+            android:id="@+id/verifyCode"
             android:layout_width="250dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
