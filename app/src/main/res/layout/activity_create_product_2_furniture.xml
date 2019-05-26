@@ -29,46 +29,46 @@
         app:layout_constraintVertical_bias="0.23000002">
 
         <RadioButton
-            android:id="@+id/furni_Electric_appliance"
+            android:id="@+id/radioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="家電" />
+            android:text="RadioButton" />
 
         <RadioButton
-            android:id="@+id/furni_bed"
+            android:id="@+id/radioButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="床鋪類" />
+            android:text="RadioButton" />
 
         <RadioButton
-            android:id="@+id/furni_shower"
+            android:id="@+id/radioButton3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="浴室類" />
+            android:text="RadioButton" />
 
         <RadioButton
-            android:id="@+id/furni_shelf"
+            android:id="@+id/radioButton4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="櫃子類" />
+            android:text="RadioButton" />
 
         <RadioButton
-            android:id="@+id/furni_table"
+            android:id="@+id/radioButton5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="桌椅類" />
+            android:text="RadioButton" />
 
         <RadioButton
-            android:id="@+id/furni_else"
+            android:id="@+id/radioButton6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="其他" />
+            android:text="RadioButton" />
     </RadioGroup>
 
 </android.support.constraint.ConstraintLayout>
