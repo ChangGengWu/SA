@@ -58,13 +58,13 @@ public class loginActivity extends AppCompatActivity {
                             for (Res h : resList) {
                                 String each = h.fields.getEmail();
                                 if (each.equals("406401513@mail.fju.edu.tw")) {
-                                    Log.v("MainActivity", "[EMail] " + each);
+                                    Log.v("MainActivity", "[EMail成功找到] " + each);
                                 }
                             }
                             Log.e("MainActivity", response.raw() + "");
                         } else {
                             Log.e("MainActivity", response.code() + "");
-                            Log.e("MainActivity", "Connect Error");
+                            Log.e("MainActivity", "連接失敗!");
                             Log.e("MainActivity", response.raw() + "");
                         }
                     }

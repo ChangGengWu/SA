@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".create_product_1"></activity>
+        <activity android:name="com.example.FJU_Store.IndexActivity"></activity>
+        <activity android:name=".create_product_1" />
         <activity android:name=".loginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
