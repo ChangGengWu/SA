@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="com.example.FJU_Store.IndexActivity"></activity>
-        <activity android:name=".create_product_1" />
+
         <activity android:name=".create_product_2_furniture"
             android:label="輸入商品規範"></activity>
         <activity
