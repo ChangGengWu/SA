@@ -11,13 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.FJU_Store.IndexActivity"></activity>
-
-        <activity android:name=".create_product_2_furniture"
-            android:label="輸入商品規範"></activity>
+        <activity android:name=".create_product_2_daily"></activity>
+        <activity android:name=".IndexActivity" />
+        <activity
+            android:name=".create_product_2_furniture"
+            android:label="輸入商品規範" />
         <activity
             android:name=".create_product_2"
-            android:label="輸入商品規範"></activity>
+            android:label="輸入商品規範" />
         <activity
             android:name=".create_product_makesure"
             android:label="確認商品資訊" />
