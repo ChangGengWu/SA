@@ -16,6 +16,6 @@ public class enrollActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String getmail = intent.getStringExtra("sentMail");
         EditText name = findViewById(R.id.user_name);
-        Toast.makeText(enrollActivity.this,"上一頁email："+getmail,Toast.LENGTH_LONG).show();
+        Toast.makeText(enrollActivity.this,"上一頁email1："+getmail,Toast.LENGTH_LONG).show();
     }
 }
