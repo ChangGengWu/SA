@@ -11,8 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".create_product_2_daily"
+        <activity android:name=".create_product_3"
             android:label="輸入商品規範"></activity>
+        <activity
+            android:name=".create_product_2_daily"
+            android:label="輸入商品規範" />
         <activity android:name=".IndexActivity" />
         <activity
             android:name=".create_product_2_furniture"
