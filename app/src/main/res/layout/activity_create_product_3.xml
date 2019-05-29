@@ -171,10 +171,11 @@
 
                 <TextView
                     android:id="@+id/textView28"
-                    android:layout_width="wrap_content"
+                    android:layout_width="91dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="商品數量" />
+                    android:text="商品數量"
+                    android:textSize="18sp" />
 
                 <EditText
                     android:id="@+id/editText4"
@@ -202,7 +203,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="TextView" />
+                    android:text="新舊程度"
+                    android:textSize="18sp" />
 
                 <EditText
                     android:id="@+id/editText5"
