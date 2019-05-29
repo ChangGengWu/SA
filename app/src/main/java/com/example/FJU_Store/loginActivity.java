@@ -41,6 +41,7 @@ public class loginActivity extends AppCompatActivity {
         btn_enroll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent toVerify = new Intent(loginActivity.this,verifyActivity.class);
                 startActivity(toVerify);
             }
