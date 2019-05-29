@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <drawable name="product_name">product_name</drawable>
-    <drawable name="product_location">product_location</drawable>
-    <drawable name="product_dollar">product_dollar</drawable>
-    <drawable name="product_amount">product_amount</drawable>
-    <drawable name="product_old">product_old</drawable>
-    <drawable name="product_smile">product_smile</drawable>
-    <drawable name="product_photo">product_photo</drawable>
+
 </resources>
