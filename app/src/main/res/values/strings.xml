@@ -25,4 +25,21 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
 
+    //這裡為新舊程度的下拉選單
+    <string-array name="old_new">
+        <item>全新</item>
+        <item>九成新</item>
+        <item>九五成新</item>
+        <item>八成新</item>
+        <item>七成新</item>
+        <item>六成新以下</item>
+    </string-array>
+
+    //以下為評價限制下拉選單
+    <string-array name="restrict">
+        <item>4顆心</item>
+        <item>3顆心</item>
+        <item>2顆心</item>
+    </string-array>
+
 </resources>
