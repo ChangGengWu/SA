@@ -26,5 +26,15 @@ public class verifyActivity extends AppCompatActivity {
 
             }
         });
+        //長耕借我一個button連到我的主畫面測試一下~~~~~~~~~~^^
+        Button btn_Index = findViewById(R.id.send);
+        btn_Index.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent toIndex = new Intent(verifyActivity.this,IndexActivity.class);
+                startActivity(toIndex);
+            }
+        });
     }
 }
