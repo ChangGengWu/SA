@@ -1,6 +1,8 @@
 package com.example.FJU_Store;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -13,26 +15,50 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.widget.ImageView;
 import android.widget.Toast;
 //toast快顯文件
 
 public class IndexActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private ImageView iv;
+    private CollapsingToolbarLayout collapsingToolbarLayout;
+    private Toolbar toolbar_2;
+
+    public IndexActivity() {
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_index);
+
+        collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar_layout);
+        iv = (ImageView) findViewById(R.id.iv);
+        toolbar_2 = (Toolbar) findViewById(R.id.toolbar);
+
+        setSupportActionBar(toolbar_2);
+        toolbar_2.setNavigationIcon(R.mipmap.ic_launcher);//ic_drawer_home
+        collapsingToolbarLayout.setTitle("主頁範例");
+        collapsingToolbarLayout.setCollapsedTitleTextColor(Color.WHITE);
+        collapsingToolbarLayout.setExpandedTitleColor(Color.WHITE);
+        iv.setImageResource(R.mipmap.ic_launcher);//ic_bg
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "按此可進入個人主頁", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
+
+
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
