@@ -370,6 +370,7 @@
                     android:layout_marginRight="50dp"
                     android:layout_weight="1"
                     android:background="#26A69A"
+                    android:onClick="goto_create_product_makesure"
                     android:text="前往確認內容" />
             </LinearLayout>
 

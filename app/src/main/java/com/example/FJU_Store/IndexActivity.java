@@ -1,5 +1,6 @@
 package com.example.FJU_Store;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -112,4 +113,10 @@ public class IndexActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+    //從nav_header "上架"進入上架流程-->creat_product_1
+    public void gotocreate_product(View v){
+        Intent it =new Intent(this,create_product_1.class);
+        startActivity(it);
+    }
+
 }

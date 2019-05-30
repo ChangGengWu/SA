@@ -64,6 +64,7 @@
                 android:background="@android:color/holo_green_light"
                 android:drawableTop="@android:drawable/btn_star_big_on"
                 android:padding="5dp" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -97,6 +98,14 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/button"
                     android:background="@android:color/transparent" />
+
+                <Button
+                    android:id="@+id/button17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="gotocreate_product"
+                    android:text="上架" />
+
             </LinearLayout>
 
             <Button
@@ -106,6 +115,7 @@
                 android:id="@+id/btn4"
                 android:background="?android:attr/colorFocusedHighlight"
                 android:textSize="18sp" />
+
         </LinearLayout>
 
     </LinearLayout>

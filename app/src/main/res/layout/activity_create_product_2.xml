@@ -9,16 +9,16 @@
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="166dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginRight="14dp"
         android:background="#DCEDC8"
         android:text="返回編輯"
         app:layout_constraintBottom_toBottomOf="@+id/button2"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox14"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/button2" />
 
@@ -44,19 +44,19 @@
         android:id="@+id/checkBox3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
         android:text="地球與環境科學類"
-        app:layout_constraintStart_toStartOf="@+id/checkBox2"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/checkBox14"
+        app:layout_constraintStart_toStartOf="@+id/checkBox2" />
 
     <CheckBox
         android:id="@+id/checkBox4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:text="生物資源類"
-        app:layout_constraintStart_toStartOf="@+id/checkBox8"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox8" />
+        app:layout_constraintBottom_toTopOf="@+id/checkBox8"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <CheckBox
         android:id="@+id/checkBox5"
@@ -91,11 +91,11 @@
         android:id="@+id/checkBox8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="23dp"
-        android:layout_marginRight="23dp"
         android:text="建築與設計類"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/checkBox9" />
+        app:layout_constraintStart_toStartOf="@+id/checkBox11"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
         android:id="@+id/checkBox9"
@@ -119,17 +119,17 @@
         android:id="@+id/checkBox11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="13dp"
+        android:layout_marginTop="14dp"
         android:text="藝術類"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox8"
-        app:layout_constraintStart_toStartOf="@+id/checkBox8" />
+        app:layout_constraintStart_toStartOf="@+id/checkBox17"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox17" />
 
     <CheckBox
         android:id="@+id/checkBox12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:layout_marginLeft="9dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="16dp"
         android:text="教育類"
         app:layout_constraintStart_toEndOf="@+id/checkBox13"
@@ -147,12 +147,12 @@
         android:id="@+id/checkBox14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="23dp"
-        android:layout_marginRight="23dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="13dp"
         android:text="社會與心理類"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox11"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/checkBox3"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox19" />
 
     <CheckBox
         android:id="@+id/checkBox15"
@@ -176,29 +176,31 @@
         android:id="@+id/checkBox17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="14dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginRight="42dp"
         android:text="財經類"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox14"
-        app:layout_constraintStart_toStartOf="@+id/checkBox14" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/checkBox" />
 
     <CheckBox
         android:id="@+id/checkBox18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="18dp"
         android:text="無分類"
-        app:layout_constraintStart_toStartOf="@+id/checkBox4"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+        app:layout_constraintStart_toStartOf="@+id/checkBox8"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox8" />
 
     <CheckBox
         android:id="@+id/checkBox19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:layout_marginLeft="9dp"
         android:layout_marginTop="11dp"
         android:text="醫療衛生類"
-        app:layout_constraintStart_toEndOf="@+id/checkBox2"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox14"
+        app:layout_constraintStart_toStartOf="@+id/checkBox14"
         app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
 
     <TextView
@@ -216,15 +218,13 @@
         android:id="@+id/button2"
         android:layout_width="166dp"
         android:layout_height="55dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
         android:layout_marginBottom="10dp"
         android:background="#26A69A"
+        android:onClick="goto_create_product_3"
         android:text="下一步"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button5" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
