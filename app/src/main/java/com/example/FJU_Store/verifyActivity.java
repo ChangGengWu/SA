@@ -27,6 +27,7 @@ public class verifyActivity extends AppCompatActivity {
             }
         });
         //長耕借我一個button連到我的主畫面測試一下~~~~~~~~~~^^
+        //喔是喔
         Button btn_Index = findViewById(R.id.send);
         btn_Index.setOnClickListener(new View.OnClickListener() {
             @Override
