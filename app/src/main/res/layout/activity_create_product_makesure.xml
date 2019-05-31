@@ -250,6 +250,7 @@
         android:layout_marginRight="30dp"
         android:layout_marginBottom="8dp"
         android:background="#26A69A"
+        android:onClick="goto_create_product_makesure1"
         android:text="前往確認圖片"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
