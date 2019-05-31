@@ -11,12 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".create_product_makesure1"></activity>
         <activity
             android:name=".IndexActivity"
             android:label="輔大二手商城"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".create_product_3"
-            android:label="輸入商品規範"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".create_product_3"
+            android:label="輸入商品規範" />
         <activity
             android:name=".create_product_2_daily"
             android:label="輸入商品規範" />
