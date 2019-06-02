@@ -31,7 +31,7 @@
             <ImageView
                 android:id="@+id/iv"
                 android:layout_width="match_parent"
-                android:layout_height="197dp"
+                android:layout_height="match_parent"
                 android:contentDescription="@string/menu_gallery"
                 android:scaleType="centerCrop"
                 android:visibility="visible"
@@ -51,7 +51,7 @@
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="8dp"
+                android:layout_height="5dp"
                 app:layout_collapseMode="pin" />
         </android.support.design.widget.CollapsingToolbarLayout>
 
@@ -60,6 +60,7 @@
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@android:color/background_light"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout

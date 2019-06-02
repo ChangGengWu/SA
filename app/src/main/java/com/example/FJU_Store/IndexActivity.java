@@ -24,6 +24,7 @@ public class IndexActivity extends AppCompatActivity
 
     private ImageView iv; //照片iv
     private CollapsingToolbarLayout collapsingToolbarLayout;
+    private Toolbar toolbar;
     private Toolbar toolbar_2;
 
     public IndexActivity() {
@@ -45,10 +46,10 @@ public class IndexActivity extends AppCompatActivity
         toolbar_2.setNavigationIcon(R.mipmap.ic_launcher);//ic_drawer_home
         collapsingToolbarLayout.setTitle("輔大二手商城");
         collapsingToolbarLayout.setCollapsedTitleTextColor(Color.BLACK);
-        collapsingToolbarLayout.setExpandedTitleColor(Color.WHITE);
+        collapsingToolbarLayout.setExpandedTitleColor(Color.BLACK);
         iv.setImageResource(R.drawable.iv);//iv
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -58,8 +59,6 @@ public class IndexActivity extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });
-
-
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
 
@@ -110,7 +109,8 @@ public class IndexActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        //menu/index.xml影響該id
+        if (id == R.id.app_bar_search) {
             return true;
         }
 
