@@ -42,4 +42,8 @@
         <item>2顆心</item>
     </string-array>
 
+    <string name="app_name_search">searchtest</string>
+    <string name="search_title">搜尋標題</string>
+    <string name="search_hint">提示</string>
+
 </resources>

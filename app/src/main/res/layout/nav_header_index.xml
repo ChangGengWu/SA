@@ -43,7 +43,7 @@
                 android:background="@color/colorPrimary"
                 android:drawableTop="@android:drawable/ic_menu_save"
                 android:padding="5dp"
-                android:text="聊天室" />
+                android:text="賣家" />
 
             <Button
                 android:id="@+id/btn2"
@@ -63,7 +63,7 @@
                 android:background="@color/colorPrimary"
                 android:drawableTop="@android:drawable/btn_star_big_on"
                 android:padding="5dp"
-                android:text="全部商品" />
+                android:text="提醒" />
         </LinearLayout>
 
         <LinearLayout
@@ -104,13 +104,6 @@
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:text="設定" />
-
-                <Button
-                    android:id="@+id/button20"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:text="提醒" />
 
                 <Button
                     android:id="@+id/button21"

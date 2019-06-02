@@ -74,34 +74,37 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/button10"
+                    android:id="@+id/books_index"
                     android:layout_width="wrap_content"
                     android:layout_height="80dp"
                     android:layout_weight="1"
+                    android:background="@color/books_index"
                     android:text="書籍" />
 
                 <Button
-                    android:id="@+id/button11"
+                    android:id="@+id/furniture_index"
                     android:layout_width="wrap_content"
                     android:layout_height="80dp"
                     android:layout_weight="1"
+                    android:background="@color/furniture_index"
                     android:text="家俱" />
 
                 <Button
-                    android:id="@+id/button14"
+                    android:id="@+id/daily_goods_index"
                     android:layout_width="wrap_content"
                     android:layout_height="80dp"
                     android:layout_weight="1"
+                    android:background="@color/daily_goods_index"
                     android:text="日常用品" />
             </LinearLayout>
 
             <include layout="@layout/index_item" />
 
-            <include layout="@layout/index_item" />
+            <include layout="@layout/index_item_1" />
 
             <include layout="@layout/index_item" />
 
-            <include layout="@layout/index_item" />
+            <include layout="@layout/index_item_1" />
 
             <include layout="@layout/index_item" />
 
