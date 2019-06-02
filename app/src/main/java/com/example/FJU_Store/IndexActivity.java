@@ -1,5 +1,6 @@
 package com.example.FJU_Store;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -15,6 +16,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 //toast快顯文件
@@ -79,6 +81,15 @@ public class IndexActivity extends AppCompatActivity
             public void onClick(View v) {
                 Toast.makeText(IndexActivity.this, "您點選訂單", Toast.LENGTH_SHORT).show();
                 onBackPressed();
+            }
+        });
+        Button btn_toCatagory = findViewById(R.id.books_index);
+        btn_toCatagory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent toCatagory = new Intent(IndexActivity.this,Catagory_Activity.class);
+                startActivity(toCatagory);
             }
         });
     }
