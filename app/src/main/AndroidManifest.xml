@@ -11,8 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".create_product_makesure1"
-                android:label="確認商品圖片"></activity>
+        <activity android:name=".create_evaluation"
+            android:label="評價此訂單"></activity>
+        <activity
+            android:name=".create_product_makesure1"
+            android:label="確認商品圖片" />
         <activity
             android:name=".IndexActivity"
             android:label="輔大二手商城"
