@@ -22,7 +22,7 @@ import android.widget.Toast;
 public class IndexActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private ImageView iv;
+    private ImageView iv; //照片iv
     private CollapsingToolbarLayout collapsingToolbarLayout;
     private Toolbar toolbar_2;
 
@@ -34,6 +34,8 @@ public class IndexActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_index);
+        //摺疊式Toolbar
+
 
         collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar_layout);
         iv = (ImageView) findViewById(R.id.iv);
@@ -41,10 +43,10 @@ public class IndexActivity extends AppCompatActivity
 
         setSupportActionBar(toolbar_2);
         toolbar_2.setNavigationIcon(R.mipmap.ic_launcher);//ic_drawer_home
-        collapsingToolbarLayout.setTitle("主頁範例");
-        collapsingToolbarLayout.setCollapsedTitleTextColor(Color.WHITE);
+        collapsingToolbarLayout.setTitle("輔大二手商城");
+        collapsingToolbarLayout.setCollapsedTitleTextColor(Color.BLACK);
         collapsingToolbarLayout.setExpandedTitleColor(Color.WHITE);
-        iv.setImageResource(R.mipmap.ic_launcher);//ic_bg
+        iv.setImageResource(R.drawable.iv);//iv
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -69,20 +71,21 @@ public class IndexActivity extends AppCompatActivity
         findViewById(R.id.btn1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(IndexActivity.this, "Button1 Click!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(IndexActivity.this, "您點選購物車", Toast.LENGTH_SHORT).show();
                 onBackPressed();
             }
         });
         findViewById(R.id.btn2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(IndexActivity.this, "Button2 Click!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(IndexActivity.this, "您點選訂單", Toast.LENGTH_SHORT).show();
                 onBackPressed();
             }
         });
     }
 
     @Override
+    //點按後自動縮回
     public void onBackPressed() {
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
