@@ -84,7 +84,7 @@ public class enrollActivity extends AppCompatActivity {
                                 @Override
                                 public void onResponse(Call<Res> call, Response<Res> response) {
                                     startActivity(intent2);
-                                    Toast.makeText(enrollActivity.this, "成功!", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(enrollActivity.this, "註冊成功!", Toast.LENGTH_LONG).show();
                                 }
 
                                 @Override
