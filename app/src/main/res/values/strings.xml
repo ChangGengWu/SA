@@ -41,5 +41,10 @@
         <item>3顆心</item>
         <item>2顆心</item>
     </string-array>
+    <string name="title_activity_alert">alert</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_notify">notify</string>
 
 </resources>

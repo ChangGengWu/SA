@@ -119,4 +119,12 @@ public class IndexActivity extends AppCompatActivity
         startActivity(it);
     }
 
+    public void gotoinquire_evaluation(View v){
+        Intent it =new Intent(this,inquire_evaluation.class);
+        startActivity(it);
+    }
+
+
+
+
 }

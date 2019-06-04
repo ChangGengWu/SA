@@ -106,6 +106,13 @@
                     android:onClick="gotocreate_product"
                     android:text="上架" />
 
+                <Button
+                    android:id="@+id/button18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="gotoinquire_evaluation"
+                    android:text="評價" />
+
             </LinearLayout>
 
             <Button
