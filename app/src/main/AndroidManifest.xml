@@ -12,9 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".alert"
-            android:label="通知" />
-        <activity
             android:name=".inquire_evaluation1"
             android:label="評價總攬" />
         <activity
