@@ -40,6 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@android:drawable/btn_default_material"
                 android:text="資訊類"
                 android:textSize="24sp" />
 
@@ -48,6 +49,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@android:drawable/btn_default_material"
                 android:text="外國語文類"
                 android:textSize="24sp" />
 
@@ -56,6 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@android:drawable/btn_default_material"
                 android:text="財經類"
                 android:textSize="24sp" />
 
@@ -89,6 +92,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@android:drawable/btn_default_material"
                 android:text="管理類"
                 android:textSize="24sp" />
 
