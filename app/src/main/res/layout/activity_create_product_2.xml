@@ -17,10 +17,10 @@
         android:layout_marginRight="32dp"
         android:background="#DCEDC8"
         android:text="返回編輯"
-        app:layout_constraintBottom_toBottomOf="@+id/button2"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintBottom_toBottomOf="@+id/chat"
+        app:layout_constraintEnd_toStartOf="@+id/chat"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button2" />
+        app:layout_constraintTop_toTopOf="@+id/chat" />
 
     <CheckBox
         android:id="@+id/checkBox"
@@ -213,7 +213,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/chat"
         android:layout_width="166dp"
         android:layout_height="55dp"
         android:layout_marginStart="24dp"

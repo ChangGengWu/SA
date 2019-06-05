@@ -1,11 +1,15 @@
 package com.example.FJU_Store;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.widget.SearchView;
+import android.view.MenuInflater;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -62,13 +66,14 @@ public class IndexActivity extends AppCompatActivity
             }
         });
 
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
+        // 左側欄位 btn1
         findViewById(R.id.btn1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,13 +81,30 @@ public class IndexActivity extends AppCompatActivity
                 onBackPressed();
             }
         });
+
+        //左側欄位 btn2
+
         findViewById(R.id.btn2).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Toast.makeText(IndexActivity.this, "您點選訂單", Toast.LENGTH_SHORT).show();
-                onBackPressed();
+            public void onClick(View view) {
+                //toast用法:
+                //Toast.makeText(IndexActivity.this, "您點選訂單", Toast.LENGTH_SHORT).show();
+                //onBackPressed();
+                //.Snackbar用法:
+                //Snackbar.make(view, "您是否選擇進入買家功能", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                //snackbat+toast
+                Snackbar.make(view, "您是否選擇進入買家功能", Snackbar.LENGTH_LONG) .setAction("確定", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(IndexActivity.this,"您已選擇買家功能",Toast.LENGTH_SHORT).show();
+                    }
+                }).show();
             }
         });
+
+
+
+        //跳頁到books_index
         Button btn_toCatagory = findViewById(R.id.books_index);
         btn_toCatagory.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,6 +114,16 @@ public class IndexActivity extends AppCompatActivity
                 startActivity(toCatagory);
             }
         });
+
+        Button btn_toErrorReport = findViewById(R.id.system_function);
+        btn_toErrorReport.setOnClickListener(new View.OnClickListener() {
+             public void onClick(View v){
+
+                 Intent toErrorReport = new Intent(IndexActivity.this,ErrorReportActivity.class);
+                 startActivity(toErrorReport);
+             }
+        });
+
     }
 
     @Override
@@ -108,7 +140,22 @@ public class IndexActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.index, menu);
+        //getMenuInflater().inflate(R.menu.index, menu);
+        //return true;
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.index, menu);
+
+        MenuItem menuSearchItem = menu.findItem(R.id.app_bar_search);
+
+        // Get the SearchView and set the searchable configuration
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        SearchView searchView = (SearchView) menuSearchItem.getActionView();
+
+        // Assumes current activity is the searchable activity
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+
+        // 這邊讓icon可以還原到搜尋的icon
+        searchView.setIconifiedByDefault(true);
         return true;
     }
 
@@ -118,12 +165,12 @@ public class IndexActivity extends AppCompatActivity
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
         //noinspection SimplifiableIfStatement
         //menu/index.xml影響該id
-        if (id == R.id.app_bar_search) {
-            return true;
-        }
+       if (id == R.id.app_bar_search) {
+           Toast.makeText(IndexActivity.this, "您點選搜尋", Toast.LENGTH_SHORT).show();
+           return true;
+       }
 
         return super.onOptionsItemSelected(item);
     }
