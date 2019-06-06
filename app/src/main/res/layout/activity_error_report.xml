@@ -2,21 +2,15 @@
 <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    android:fitsSystemWindows="true"
-    tools:openDrawer="start">
-
-    //使用include嵌入一個xml(主畫面)
+    tools:context="com.example.FJU_Store.ErrorReportActivity">
 
     <include
-        layout="@layout/app_bar_index"
+        layout="@layout/content_error_report"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <!--nav_header_index為可發揮的側邊攔-->
     <LinearLayout
         android:id="@+id/nav_view"
         android:layout_width="250dp"

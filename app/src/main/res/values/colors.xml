@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimary">#00574B</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#CE3069</color>
+    <color name="books">#33CCCC</color>
+    <color name="furniture_index">#EE7FAB</color>
+    <color name="daily_goods_index">#6699CC</color>
+    <color name="books_index">#33CCCC</color>
 </resources>

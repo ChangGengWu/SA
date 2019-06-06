@@ -25,6 +25,33 @@
         <activity
             android:name=".create_product_makesure1"
             android:label="確認商品圖片" />
+
+        <activity
+            android:name=".SearchableActivity"
+            android:label="@string/title_activity_searchable"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+
+
+        <activity
+            android:name=".ErrorReportActivity"
+            android:label="錯誤回報"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Catagory_Activity"
+            android:label="請選擇類別"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".IndexActivity"
             android:label="輔大二手商城"
@@ -47,6 +74,8 @@
         <activity
             android:name=".create_product_1"
             android:label="輸入商品規範" />
+        <activity android:name=".enrollActivity" />
+        <activity android:name=".verifyActivity" />
         <activity android:name=".loginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -54,8 +83,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".enrollActivity" />
-        <activity android:name=".verifyActivity" />
+
     </application>
 
 </manifest>
