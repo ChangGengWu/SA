@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.FJU_Store">
-
-    <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,15 +15,16 @@
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".create_product_3"
             android:label="輸入商品規範"></activity>
-        <activity
-            android:name=".create_product_2_daily"
-            android:label="輸入商品規範" />
+        <activity android:name=".orderDoneActivity"></activity>
         <activity
             android:name=".create_product_2_furniture"
             android:label="輸入商品規範" />
         <activity
-            android:name=".create_product_2"
+            android:name=".create_product_2_daily"
             android:label="輸入商品規範" />
+        <activity
+            android:name=".create_product_2"
+            android:label="輸入商品規範"></activity>
         <activity
             android:name=".create_product_makesure"
             android:label="確認商品資訊" />
@@ -35,12 +34,11 @@
         <activity android:name=".loginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".enrollActivity" />
-        <activity android:name=".verifyActivity" />
+        <activity android:name="com.example.FJU_Store.enrollActivity"/>
+        <activity android:name="com.example.FJU_Store.verifyActivity" />
     </application>
 
 </manifest>

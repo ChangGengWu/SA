@@ -7,9 +7,11 @@ public class USER {
     private String user_gender;
     private String create_date;
 
-    public USER(String email, String user_password, String user_name,String user_gender, String create_date) {
+    public USER(String email, String user_password, String user_name,String user_gender) {
         Email = email;
         this.user_password = user_password;
+        this.user_name = user_name;
+        this.user_gender = user_gender;
     }
 
     public String getEmail() {
