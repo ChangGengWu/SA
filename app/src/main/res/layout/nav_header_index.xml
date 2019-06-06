@@ -63,7 +63,7 @@
                 android:background="@color/colorPrimary"
                 android:drawableTop="@android:drawable/btn_star_big_on"
                 android:padding="5dp"
-                android:text="提醒" />
+                android:text="上架" />
         </LinearLayout>
 
         <LinearLayout
@@ -99,11 +99,11 @@
                     android:text="聊天室" />
 
                 <Button
-                    android:id="@+id/setting"
+                    android:id="@+id/score"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
-                    android:text="設定" />
+                    android:text="評價" />
 
                 <Button
                     android:id="@+id/system_function"
@@ -111,6 +111,13 @@
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:text="系統功能" />
+
+                <Button
+                    android:id="@+id/error_report"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="錯誤回報" />
             </LinearLayout>
 
             <Button

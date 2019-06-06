@@ -123,6 +123,26 @@ public class IndexActivity extends AppCompatActivity
                  startActivity(toErrorReport);
              }
         });
+        //洪湘涵借用 上架
+        Button  upload = findViewById(R.id.btn3);
+        upload.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v){
+
+                Intent upload = new Intent(IndexActivity.this,create_product_1.class);
+                startActivity(upload);
+            }
+        });
+
+        //洪湘涵借用 評價
+        Button  score = findViewById(R.id.score);
+        score.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v){
+
+                Intent score = new Intent(IndexActivity.this,inquire_evaluation.class);
+                startActivity(score);
+            }
+        });
+
 
     }
 
