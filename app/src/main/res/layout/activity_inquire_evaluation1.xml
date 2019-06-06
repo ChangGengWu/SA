@@ -115,6 +115,7 @@
         android:layout_marginStart="1dp"
         android:layout_marginLeft="1dp"
         android:layout_marginTop="12dp"
+        android:background="#FFCA28"
         android:text="4顆星"
         app:layout_constraintEnd_toStartOf="@+id/button34"
         app:layout_constraintHorizontal_bias="0.5"
