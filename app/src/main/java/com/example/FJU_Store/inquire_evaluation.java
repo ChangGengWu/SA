@@ -5,16 +5,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class create_product_makesure extends AppCompatActivity {
+public class inquire_evaluation extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_product_makesure);
+        setContentView(R.layout.activity_inquire_evaluation);
     }
 
-    public void goto_create_product_makesure1(View v){
-        Intent it =new Intent(this,create_product_makesure1.class);
+    public void goto_iquire_evaluation1(View v){
+        Intent it =new Intent(this,inquire_evaluation1.class);
         startActivity(it);
     }
 }

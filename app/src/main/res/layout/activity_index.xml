@@ -16,7 +16,7 @@
 
 
     <LinearLayout
-        android:id="@+id/nav_view"
+        android:id="@+id/fragment_"
         android:orientation="horizontal"
         android:layout_width="250dp"
         android:layout_height="match_parent"
