@@ -114,16 +114,16 @@ public class IndexActivity extends AppCompatActivity
                 startActivity(toCatagory);
             }
         });
-
+        //系統功能暫時連到ErrorReportActivity
         Button btn_toErrorReport = findViewById(R.id.system_function);
         btn_toErrorReport.setOnClickListener(new View.OnClickListener() {
              public void onClick(View v){
 
-                 Intent toErrorReport = new Intent(IndexActivity.this,ErrorReportActivity.class);
-                 startActivity(toErrorReport);
+                 Intent btn_toErrorReport = new Intent(IndexActivity.this,ErrorReportActivity.class);
+                 startActivity(btn_toErrorReport);
              }
         });
-        //洪湘涵借用 上架
+        //洪湘涵使用 上架
         Button  upload = findViewById(R.id.btn3);
         upload.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v){
@@ -133,7 +133,7 @@ public class IndexActivity extends AppCompatActivity
             }
         });
 
-        //洪湘涵借用 評價
+        //洪湘涵使用 評價
         Button  score = findViewById(R.id.score);
         score.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v){
@@ -143,6 +143,15 @@ public class IndexActivity extends AppCompatActivity
             }
         });
 
+        //使用 .OrderActivity
+        Button  toOrder = findViewById(R.id.OwnPage);
+        toOrder.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v){
+
+                Intent toOrder = new Intent(IndexActivity.this,OrderActivity.class);
+                startActivity(toOrder);
+            }
+        });
 
     }
 

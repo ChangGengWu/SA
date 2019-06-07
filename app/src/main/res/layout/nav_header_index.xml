@@ -125,7 +125,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#D0D5DB"
-                android:text="個人頁面"
+                android:text="個人商品"
                 android:textSize="18sp" />
         </LinearLayout>
 
