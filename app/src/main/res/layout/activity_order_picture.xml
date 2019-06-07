@@ -1,0 +1,39 @@
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btn_last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上一頁"
+            android:textSize="30dp"
+            />
+
+
+
+        <LinearLayout
+            android:id="@+id/viewGroup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

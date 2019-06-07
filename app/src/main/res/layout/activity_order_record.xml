@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/order_toolbar" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                />
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#000000"
+                android:padding="1dp"
+                >
+
+                <TableRow
+                    android:background="#FFFFFF"
+                    android:padding="5dp"
+                    android:paddingTop="20dp"
+                    >
+                </TableRow>
+
+
+                <TableRow
+                    android:background="#EEFFBB"
+                    android:padding="5dp"
+                    android:paddingTop="8dp"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/imagebutton1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/pythonbook" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:text="跟阿志哥學Python"
+                        android:textSize="20dp"
+                        android:textColor="#0000CD" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:text="$850"
+                        android:textSize="20dp"
+                        android:textColor="#CC0000" />
+                </TableRow>
+
+                <TableRow
+                    android:background="#EEFFBB"
+                    android:padding="5dp"
+                    >
+                    <Button
+                        android:id="@+id/bt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="觀看商品"
+                        android:textSize="30dp"
+                        android:background="#ADD8E6"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:text="上架中"
+                        android:textSize="20dp"
+                        android:textColor="#CC0000" />
+
+                </TableRow>
+
+
+
+
+                <TableRow
+                    android:background="#FFFFFF"
+                    android:padding="5dp"
+                    android:paddingTop="20dp"
+                    >
+                </TableRow>
+
+
+
+                <TableRow
+                    android:background="#EEFFBB"
+                    android:padding="5dp"
+                    android:paddingTop="8dp"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/imagebutton2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/cbook" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:text="C語言"
+                        android:textSize="20dp"
+                        android:textColor="#0000CD" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:text="$777"
+                        android:textSize="20dp"
+                        android:textColor="#CC0000" />
+                </TableRow>
+
+
+
+
+                <TableRow
+                    android:background="#EEFFBB"
+                    android:padding="5dp"
+                    >
+                    <Button
+                        android:id="@+id/bt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="觀看商品"
+                        android:textSize="30dp"
+                        android:background="#ADD8E6"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:text="完成交易"
+                        android:textSize="20dp"
+                        android:textColor="	#0000CD" />
+
+                </TableRow>
+
+
+                <TableRow
+                    android:background="#FFFFFF"
+                    android:padding="5dp"
+                    android:paddingTop="20dp"
+                    >
+                </TableRow>
+
+
+
+                <TableRow
+                    android:background="#EEFFBB"
+                    android:padding="5dp"
+                    android:paddingTop="8dp"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/imagebutton3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/javabook" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:text="JAVA程式設計"
+                        android:textSize="20dp"
+                        android:textColor="#0000CD" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:text="$600"
+                        android:textSize="20dp"
+                        android:textColor="#CC0000" />
+                </TableRow>
+
+                <TableRow
+                    android:background="#EEFFBB"
+                    android:padding="5dp"
+                    >
+                    <Button
+                        android:id="@+id/bt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="觀看商品"
+                        android:textSize="30dp"
+                        android:background="#ADD8E6"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:text="完成交易"
+                        android:textSize="20dp"
+                        android:textColor="#0000CD" />
+
+                </TableRow>
+
+
+            </TableLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>
+
+

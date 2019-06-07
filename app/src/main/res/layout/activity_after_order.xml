@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/order_toolbar" />
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                />
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F8F8FF"
+                android:paddingBottom="500dp" />
+
+
+
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#000000"
+                android:padding="1dp"
+                >
+
+                <TableRow
+                    android:background="#EEFFBB"
+                    android:padding="5dp"
+                    android:paddingTop="8dp"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/imagebutton1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#FFFFFF"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/pythonbook" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:text="跟阿志哥學Python"
+                        android:textSize="20dp"
+                        android:textColor="#0000CD" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:text="$850"
+                        android:textSize="20dp"
+                        android:textColor="#CC0000" />
+                </TableRow>
+
+                <TableRow
+                    android:background="#EEFFBB"
+                    android:paddingBottom="5dp"
+                    >
+                    <Button
+                        android:id="@+id/Buyit"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="我要買" />
+                </TableRow>
+
+            </TableLayout>
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:paddingTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/input_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="與買家聊天"
+                    android:inputType="none"
+                    android:maxLines="2" />
+
+                <Button
+                    android:id="@+id/send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="傳遞訊息" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>
+
+
+

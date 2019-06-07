@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="horizontal">
+
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        android:text="加入收藏"
+        android:textSize="20sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/view"
+        />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btn_buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#B0C4DE"
+        android:text="我想買"
+        android:textSize="20sp"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/view"
+        android:layout_alignParentBottom="true"
+        />
+
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+        //要加linearlayout才可用ScrollView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="70dp">
+
+
+                <ImageButton
+                    android:id="@+id/imagebutton1"
+                    android:layout_width="400dp"
+                    android:layout_height="400dp"
+                    android:background="#FFFFFF"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/pythonbook" />
+
+
+            </LinearLayout>
+
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:paddingTop="20dp">
+
+
+                <TableRow
+                    android:background="#DAE8FC"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="商品詳情"
+
+                        android:textColor="#0000CD" />
+                </TableRow>
+
+                <TableRow
+                    android:background="#F0F8FF"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/title1_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:gravity="center"
+                        android:text="分類"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/title1_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="書籍>資訊類"
+                        android:textColor="#CC0000" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:background="#F0F8FF"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/title1_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:gravity="center"
+                        android:text="新舊程度"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/title1_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="五成新"
+                        android:textColor="@android:color/black" />
+
+                </TableRow>
+
+                <TableRow
+                    android:background="#F0F8FF"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/title1_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:gravity="center"
+                        android:text="商品數量"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/title1_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@android:color/black" />
+
+                </TableRow>
+
+                <TableRow
+                    android:background="#F0F8FF"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/title1_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:gravity="center"
+                        android:text="面交地點"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/title1_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="LM101"
+                        android:textColor="@android:color/black" />
+                </TableRow>
+
+                <TableRow
+                    android:background="#F0F8FF"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/title1_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:gravity="center"
+                        android:text="評價最低限制"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/title1_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="三顆星"
+                        android:textColor="@android:color/black" />
+                </TableRow>
+
+
+                //空白
+
+                <TableRow
+                    android:background="#FFFFFF"
+                    android:padding="5dp">
+
+                    <TextView />
+                </TableRow>
+
+                <TableRow
+                    android:background="#DAE8FC"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/title2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="商品描述"
+
+                        android:textColor="#0000CD" />
+                </TableRow>
+
+                <TableRow
+                    android:background="#F0F8FF"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/title2_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="1.2013年購入，有幾頁筆記的痕跡\n2.想看內頁可以私訊"
+                        android:textColor="@android:color/black" />
+
+                </TableRow>
+
+                //空白
+
+                <TableRow
+                    android:background="#FFFFFF"
+                    android:padding="5dp">
+
+                    <TextView />
+                </TableRow>
+
+                <TableRow
+                    android:background="#DAE8FC"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/title3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="商品回覆"
+                        android:textColor="#0000CD" />
+                </TableRow>
+
+                <TableRow
+                    android:background="#F0F8FF"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/title3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="queen_12\n***\n賣家回覆速度很慢"
+                        android:textColor="@android:color/black" />
+                </TableRow>
+
+                <TableRow
+                    android:background="#F0F8FF"
+                    android:paddingBottom="5dp"
+                    >
+                    <Button
+                        android:id="@+id/seeR"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#ADFF2F"
+                        android:text="查看買賣紀錄" />
+                </TableRow>
+
+
+
+                <TableRow
+                    android:background="#FFFFFF"
+                    android:padding="20dp"></TableRow>
+
+
+
+                //空白
+
+                <TableRow
+                    android:background="#FFFFFF"
+                    android:padding="5dp">
+
+                    <TextView />
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
