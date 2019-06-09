@@ -17,13 +17,13 @@
         android:layout_marginRight="64dp"
         android:background="#DCEDC8"
         android:text="返回編輯"
-        app:layout_constraintBottom_toBottomOf="@+id/button2"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintBottom_toBottomOf="@+id/next_book"
+        app:layout_constraintEnd_toStartOf="@+id/next_book"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button2" />
+        app:layout_constraintTop_toTopOf="@+id/next_book" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/c3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
@@ -34,16 +34,16 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/c8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="休閒餐旅類"
-        app:layout_constraintStart_toStartOf="@+id/checkBox7"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox7" />
+        app:layout_constraintStart_toStartOf="@+id/c5"
+        app:layout_constraintTop_toBottomOf="@+id/c5" />
 
     <CheckBox
-        android:id="@+id/checkBox3"
+        android:id="@+id/c18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -51,66 +51,66 @@
         android:layout_marginTop="11dp"
         android:text="地球與環境科學類"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox12" />
+        app:layout_constraintTop_toBottomOf="@+id/c16" />
 
     <CheckBox
-        android:id="@+id/checkBox4"
+        android:id="@+id/c9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="13dp"
         android:text="生物資源類"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox8"
-        app:layout_constraintStart_toStartOf="@+id/checkBox8" />
+        app:layout_constraintBottom_toTopOf="@+id/c12"
+        app:layout_constraintStart_toStartOf="@+id/c12" />
 
     <CheckBox
-        android:id="@+id/checkBox5"
+        android:id="@+id/c14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:text="生命科學類"
-        app:layout_constraintStart_toStartOf="@+id/checkBox9"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox9" />
+        app:layout_constraintStart_toStartOf="@+id/c11"
+        app:layout_constraintTop_toBottomOf="@+id/c11" />
 
     <CheckBox
-        android:id="@+id/checkBox6"
+        android:id="@+id/c2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
         android:text="文史哲類"
-        app:layout_constraintStart_toEndOf="@+id/checkBox17"
-        app:layout_constraintTop_toTopOf="@+id/checkBox17" />
+        app:layout_constraintStart_toEndOf="@+id/c1"
+        app:layout_constraintTop_toTopOf="@+id/c1" />
 
     <CheckBox
-        android:id="@+id/checkBox7"
+        android:id="@+id/c5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
         android:text="數理化類"
-        app:layout_constraintStart_toStartOf="@+id/checkBox6"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox6" />
+        app:layout_constraintStart_toStartOf="@+id/c2"
+        app:layout_constraintTop_toBottomOf="@+id/c2" />
 
     <CheckBox
-        android:id="@+id/checkBox8"
+        android:id="@+id/c12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="25dp"
         android:layout_marginRight="25dp"
         android:text="建築與設計類"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/checkBox9" />
+        app:layout_constraintTop_toTopOf="@+id/c11" />
 
     <CheckBox
-        android:id="@+id/checkBox9"
+        android:id="@+id/c11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="13dp"
         android:text="電機工程類"
-        app:layout_constraintStart_toStartOf="@+id/checkBox2"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+        app:layout_constraintStart_toStartOf="@+id/c8"
+        app:layout_constraintTop_toBottomOf="@+id/c8" />
 
     <CheckBox
-        android:id="@+id/checkBox10"
+        android:id="@+id/c13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -118,10 +118,10 @@
         android:layout_marginTop="18dp"
         android:text="資訊類"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox11" />
+        app:layout_constraintTop_toBottomOf="@+id/c10" />
 
     <CheckBox
-        android:id="@+id/checkBox11"
+        android:id="@+id/c10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -129,10 +129,10 @@
         android:layout_marginTop="13dp"
         android:text="藝術類"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox15" />
+        app:layout_constraintTop_toBottomOf="@+id/c7" />
 
     <CheckBox
-        android:id="@+id/checkBox12"
+        android:id="@+id/c16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -140,19 +140,19 @@
         android:layout_marginTop="11dp"
         android:text="教育類"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox10" />
+        app:layout_constraintTop_toBottomOf="@+id/c13" />
 
     <CheckBox
-        android:id="@+id/checkBox13"
+        android:id="@+id/c6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
         android:text="大眾傳播類"
-        app:layout_constraintStart_toStartOf="@+id/checkBox"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        app:layout_constraintStart_toStartOf="@+id/c3"
+        app:layout_constraintTop_toBottomOf="@+id/c3" />
 
     <CheckBox
-        android:id="@+id/checkBox14"
+        android:id="@+id/c15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
@@ -160,10 +160,10 @@
         android:layout_marginRight="25dp"
         android:text="社會與心理類"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox8" />
+        app:layout_constraintTop_toBottomOf="@+id/c12" />
 
     <CheckBox
-        android:id="@+id/checkBox15"
+        android:id="@+id/c7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -171,10 +171,10 @@
         android:layout_marginTop="16dp"
         android:text="法政類"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox16" />
+        app:layout_constraintTop_toBottomOf="@+id/c4" />
 
     <CheckBox
-        android:id="@+id/checkBox16"
+        android:id="@+id/c4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -182,10 +182,10 @@
         android:layout_marginTop="14dp"
         android:text="管理類"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox17" />
+        app:layout_constraintTop_toBottomOf="@+id/c1" />
 
     <CheckBox
-        android:id="@+id/checkBox17"
+        android:id="@+id/c1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -196,22 +196,22 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <CheckBox
-        android:id="@+id/checkBox18"
+        android:id="@+id/c19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
         android:text="無分類"
-        app:layout_constraintStart_toStartOf="@+id/checkBox14"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox14" />
+        app:layout_constraintStart_toStartOf="@+id/c15"
+        app:layout_constraintTop_toBottomOf="@+id/c15" />
 
     <CheckBox
-        android:id="@+id/checkBox19"
+        android:id="@+id/c17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
         android:text="醫療衛生類"
-        app:layout_constraintStart_toStartOf="@+id/checkBox5"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
+        app:layout_constraintStart_toStartOf="@+id/c14"
+        app:layout_constraintTop_toBottomOf="@+id/c14" />
 
     <TextView
         android:id="@+id/textView"
@@ -220,12 +220,12 @@
         android:layout_marginTop="34dp"
         android:text="請選擇書籍分類(多選)"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/checkBox6"
-        app:layout_constraintStart_toEndOf="@+id/checkBox6"
+        app:layout_constraintEnd_toEndOf="@+id/c2"
+        app:layout_constraintStart_toEndOf="@+id/c2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/next_book"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginEnd="15dp"
