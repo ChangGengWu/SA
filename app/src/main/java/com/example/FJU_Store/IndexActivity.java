@@ -51,8 +51,8 @@ public class IndexActivity extends AppCompatActivity
         setSupportActionBar(toolbar_2);
         toolbar_2.setNavigationIcon(R.mipmap.ic_launcher);//ic_drawer_home
         collapsingToolbarLayout.setTitle("輔大二手商城");
-        collapsingToolbarLayout.setCollapsedTitleTextColor(Color.BLACK);
-        collapsingToolbarLayout.setExpandedTitleColor(Color.BLACK);
+        collapsingToolbarLayout.setCollapsedTitleTextColor(Color.WHITE);
+        collapsingToolbarLayout.setExpandedTitleColor(Color.WHITE);
         iv.setImageResource(R.drawable.iv);//iv
 
         toolbar = findViewById(R.id.toolbar);

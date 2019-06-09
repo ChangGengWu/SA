@@ -11,12 +11,12 @@
 
     //使用include嵌入一個xml(主畫面)
 
+    <!--nav_header_index為可發揮的側邊攔-->
     <include
         layout="@layout/app_bar_index"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <!--nav_header_index為可發揮的側邊攔-->
     <LinearLayout
         android:id="@+id/nav_view"
         android:layout_width="250dp"
