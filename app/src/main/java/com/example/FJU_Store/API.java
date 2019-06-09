@@ -13,5 +13,5 @@ public interface API {
     Call<ListRes> getUser(@QueryMap(encoded = true) Map<String, String> queryMap);
 
     @POST("User?api_key=keySEVC5l6huQZqzW")
-    Call<Res> postUser(@Body user_Req req);
+    Call<user_Res> postUser(@Body user_Req req);
 }
