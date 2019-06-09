@@ -24,7 +24,7 @@ public class create_product_2_daily extends AppCompatActivity implements RadioGr
         daily_category.setOnCheckedChangeListener(this);
 
         Intent intent = getIntent();//接1的值
-        final Product product_data = (Product) getIntent().getSerializableExtra("product_data");
+        final Product_w product_data = (Product_w) getIntent().getSerializableExtra("product_data");
         Log.d("HKG","product_data "+product_data.getProduct_main());
 
     }
@@ -58,7 +58,7 @@ public class create_product_2_daily extends AppCompatActivity implements RadioGr
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(create_product_2_daily.this, create_product_3.class);
-                    Product product = new Product();
+                    Product_w product = new Product_w();
                     product.setProduct_main("日常用品類");
                     product.setProduct_sub_1("盆洗用品類");
                     intent.putExtra("product_data", product);
@@ -74,7 +74,7 @@ public class create_product_2_daily extends AppCompatActivity implements RadioGr
                     Intent intent = new Intent(create_product_2_daily.this, create_product_3.class);
                     //intent.putExtra("book","書籍類");
 
-                    Product product = new Product();
+                    Product_w product = new Product_w();
                     product.setProduct_sub_1("文具類");
                     intent.putExtra("product_data", product);
                     product.setProduct_main("日常用品類");
@@ -89,7 +89,7 @@ public class create_product_2_daily extends AppCompatActivity implements RadioGr
                     Intent intent = new Intent(create_product_2_daily.this, create_product_3.class);
 
 
-                    Product product = new Product();
+                    Product_w product = new Product_w();
                     product.setProduct_sub_1("化妝品類");
                     product.setProduct_main("日常用品類");
                     intent.putExtra("product_data", product);
@@ -105,7 +105,7 @@ public class create_product_2_daily extends AppCompatActivity implements RadioGr
                     Intent intent = new Intent(create_product_2_daily.this, create_product_3.class);
                     //intent.putExtra("book","書籍類");
 
-                    Product product = new Product();
+                    Product_w product = new Product_w();
                     product.setProduct_sub_1("裝飾用品類");
                     product.setProduct_main("日常用品類");
                     intent.putExtra("product_data", product);
@@ -121,7 +121,7 @@ public class create_product_2_daily extends AppCompatActivity implements RadioGr
                     Intent intent = new Intent(create_product_2_daily.this, create_product_3.class);
                     //intent.putExtra("book","書籍類");
 
-                    Product product = new Product();
+                    Product_w product = new Product_w();
                     product.setProduct_sub_1("衣著類");
                     product.setProduct_main("日常用品類");
                     intent.putExtra("product_data", product);
@@ -137,7 +137,7 @@ public class create_product_2_daily extends AppCompatActivity implements RadioGr
                     Intent intent = new Intent(create_product_2_daily.this, create_product_3.class);
                     //intent.putExtra("book","書籍類");
 
-                    Product product = new Product();
+                    Product_w product = new Product_w();
                     product.setProduct_sub_1("其他類");
                     product.setProduct_main("日常用品類");
                     intent.putExtra("product_data", product);

@@ -2,7 +2,7 @@ package com.example.FJU_Store;
 
 public class product_Req {
 
-    private Product fields;
+    private Product_w fields;
 
    /* public product_Req(USER fields) {
         this.fields = fields;

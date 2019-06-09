@@ -31,7 +31,7 @@ TextView p_restrict;
         p_category=findViewById(R.id.p_category);
 
         Intent intent = getIntent();//接1的值
-        final Product product_data = (Product) getIntent().getSerializableExtra("product_data");
+        final Product_w product_data = (Product_w) getIntent().getSerializableExtra("product_data");
 
         p_category.setText(product_data.getProduct_main()+">"+product_data.getProduct_sub_1());
         Log.d("HKG","product_data "+product_data.getProduct_main()+product_data.getProduct_sub_1());

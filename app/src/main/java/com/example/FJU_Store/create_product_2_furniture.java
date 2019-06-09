@@ -24,7 +24,7 @@ public class create_product_2_furniture extends AppCompatActivity implements Rad
         furniture_category.setOnCheckedChangeListener(this);
 
         Intent intent = getIntent();//接1的值
-        final Product product_data = (Product) getIntent().getSerializableExtra("product_data");
+        final Product_w product_data = (Product_w) getIntent().getSerializableExtra("product_data");
         Log.d("HKG","product_data "+product_data.getProduct_main());
     }
 
@@ -58,7 +58,7 @@ public class create_product_2_furniture extends AppCompatActivity implements Rad
                     Intent intent =new Intent(create_product_2_furniture.this,create_product_3.class);
                     //intent.putExtra("book","書籍類");
 
-                    Product product = new Product();
+                    Product_w product = new Product_w();
                     product.setProduct_main("傢具類");
                     product.setProduct_sub_1("家電類");
                     intent.putExtra("product_data",product);
@@ -75,7 +75,7 @@ public class create_product_2_furniture extends AppCompatActivity implements Rad
                     Intent intent =new Intent(create_product_2_furniture.this,create_product_3.class);
                     //intent.putExtra("book","書籍類");
 
-                    Product product = new Product();
+                    Product_w product = new Product_w();
                     product.setProduct_main("傢具類");
                     product.setProduct_sub_1("床鋪類");
                     intent.putExtra("product_data",product);
@@ -93,7 +93,7 @@ public class create_product_2_furniture extends AppCompatActivity implements Rad
                     Intent intent =new Intent(create_product_2_furniture.this,create_product_3.class);
                     //intent.putExtra("book","書籍類");
 
-                    Product product = new Product();
+                    Product_w product = new Product_w();
                     product.setProduct_sub_1("浴室類");
                     product.setProduct_main("傢具類");
                     intent.putExtra("product_data",product);
@@ -111,7 +111,7 @@ public class create_product_2_furniture extends AppCompatActivity implements Rad
                     Intent intent =new Intent(create_product_2_furniture.this,create_product_3.class);
                     //intent.putExtra("book","書籍類");
 
-                    Product product = new Product();
+                    Product_w product = new Product_w();
                     product.setProduct_sub_1("櫃子類");
                     product.setProduct_main("傢具類");
                     intent.putExtra("product_data",product);
@@ -129,7 +129,7 @@ public class create_product_2_furniture extends AppCompatActivity implements Rad
                     Intent intent =new Intent(create_product_2_furniture.this,create_product_3.class);
                     //intent.putExtra("book","書籍類");
 
-                    Product product = new Product();
+                    Product_w product = new Product_w();
                     product.setProduct_sub_1("桌椅類");
                     product.setProduct_main("傢具類");
                     intent.putExtra("product_data",product);
@@ -147,7 +147,7 @@ public class create_product_2_furniture extends AppCompatActivity implements Rad
                     Intent intent =new Intent(create_product_2_furniture.this,create_product_3.class);
                     //intent.putExtra("book","書籍類");
 
-                    Product product = new Product();
+                    Product_w product = new Product_w();
                     product.setProduct_sub_1("其他類");
                     product.setProduct_main("傢具類");
                     intent.putExtra("product_data",product);

@@ -46,7 +46,7 @@ Spinner evaluation_star;
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(create_product_3.this, create_product_makesure.class);
-                Product product = new Product();
+                Product_w product = new Product_w();
                 p_name=findViewById(R.id.p_name);
                 p_site=findViewById(R.id.p_site);
                 p_price=findViewById(R.id.p_price);
@@ -55,7 +55,7 @@ Spinner evaluation_star;
 
                 //p_name.getText();
                 Intent intent1 = getIntent();
-                Product product_data = (Product) getIntent().getSerializableExtra("product_data");
+                Product_w product_data = (Product_w) getIntent().getSerializableExtra("product_data");
 
                 product.setProduct_name(p_name.getText().toString());
                 product.setProduct_site(p_site.getText().toString());
@@ -74,7 +74,7 @@ Spinner evaluation_star;
         });
 
         Intent intent1 = getIntent();//接1的值
-        Product product_data = (Product) getIntent().getSerializableExtra("product_data");
+        Product_w product_data = (Product_w) getIntent().getSerializableExtra("product_data");
 
         // Log.d("HKG","product_data "+product_data.getProduct_main());
         sub_category.setText(product_data.getProduct_sub_1());

@@ -31,7 +31,7 @@ public class create_product_2 extends AppCompatActivity implements CompoundButto
 
         Intent intent = getIntent();
         //String book_category = intent.getStringExtra("book_category");
-        final Product product_data = (Product) getIntent().getSerializableExtra("product_data");
+        final Product_w product_data = (Product_w) getIntent().getSerializableExtra("product_data");
         Button next_book=findViewById(R.id.next_book);
         next_book.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,7 +41,7 @@ public class create_product_2 extends AppCompatActivity implements CompoundButto
                     msg+=chk.getText()+"/";
                 }
                 Intent intent =new Intent(create_product_2.this,create_product_3.class);
-                Product product = new Product();
+                Product_w product = new Product_w();
                 product_data.getProduct_main();
                 product.setProduct_main("書籍類");
                 product.setProduct_sub_1(msg);

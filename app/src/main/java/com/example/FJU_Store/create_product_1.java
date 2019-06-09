@@ -59,7 +59,7 @@ public class create_product_1 extends AppCompatActivity implements RadioGroup.On
                     Intent intent =new Intent(create_product_1.this,create_product_2.class);
                     //intent.putExtra("book","書籍類");
 
-                    Product product = new Product();
+                    Product_w product = new Product_w();
                     product.setProduct_main("書籍類");
                     intent.putExtra("product_data",product);
 
@@ -73,7 +73,7 @@ public class create_product_1 extends AppCompatActivity implements RadioGroup.On
                 @Override
                 public void onClick(View v) {
                     Intent intent =new Intent(create_product_1.this,create_product_2_furniture.class);
-                    Product product = new Product();
+                    Product_w product = new Product_w();
                     product.setProduct_main("傢具類");
                     intent.putExtra("product_data",product);
                     startActivity(intent);
@@ -89,7 +89,7 @@ public class create_product_1 extends AppCompatActivity implements RadioGroup.On
                 public void onClick(View v) {
                     Intent intent =new Intent(create_product_1.this,create_product_2_daily.class);
 
-                    Product product = new Product();
+                    Product_w product = new Product_w();
                     product.setProduct_main("生活用品類");
                     intent.putExtra("product_data",product);
                     startActivity(intent);
