@@ -68,6 +68,7 @@ public class loginActivity extends AppCompatActivity {
                                     for (user_Res h : resList) {
                                         String acc = h.fields.getEmail();
                                         String pass = h.fields.getUser_password();
+                                        String userName = h.fields.getUser_name();
                                         Log.v("MainActivity", acc+" "+pass);
                                         //Log.v("MainActivity", "[EMail成功找到] " + acc);
                                         //Log.v("MainActivity", "[EMail成功找到] " + pass);
@@ -77,7 +78,11 @@ public class loginActivity extends AppCompatActivity {
                                     if (flag == 1) {
                                         //Intent login = new Intent(loginActivity.this,indexActivity.class);
                                         //startActivity(login);
+
                                         Toast.makeText(loginActivity.this, "正確", Toast.LENGTH_LONG).show();
+                                        Intent toIndex = new Intent(loginActivity.this, IndexActivity.class);
+                                        toIndex.putExtra("userMail",mail);
+                                        startActivity(toIndex);
 
                                     } else
                                         Toast.makeText(loginActivity.this, "錯誤", Toast.LENGTH_LONG).show();
