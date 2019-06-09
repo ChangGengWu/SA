@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
 public class after_order extends AppCompatActivity {
@@ -18,6 +20,14 @@ public class after_order extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        Button IwantIt = findViewById(R.id.Buyit);
+        IwantIt.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v){
+
+                Intent IwantIt = new Intent(after_order.this,accept_orderActivity.class);
+                startActivity(IwantIt);
+            }
+        });
 
     }
 
