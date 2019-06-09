@@ -1,10 +1,8 @@
 package com.example.FJU_Store;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -79,16 +77,16 @@ public class enrollActivity extends AppCompatActivity {
                         }
                         else{
                             USER user =  new USER(getmail,newPass,newName,gender);
-                            Call<Res> call = api.postUser(new user_Req(user));
-                            call.enqueue(new Callback<Res>() {
+                            Call<user_Res> call = api.postUser(new user_Req(user));
+                            call.enqueue(new Callback<user_Res>() {
                                 @Override
-                                public void onResponse(Call<Res> call, Response<Res> response) {
+                                public void onResponse(Call<user_Res> call, Response<user_Res> response) {
                                     startActivity(intent2);
                                     Toast.makeText(enrollActivity.this, "註冊成功!", Toast.LENGTH_LONG).show();
                                 }
 
                                 @Override
-                                public void onFailure(Call<Res> call, Throwable t) {
+                                public void onFailure(Call<user_Res> call, Throwable t) {
 
                                 }
                             });

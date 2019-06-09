@@ -2,8 +2,8 @@ package com.example.FJU_Store;
 
 import java.util.List;
 
-public class ListRes {
-    public List<user_Res> records;
+public class product_ListRes {
+    public List<product_Res> records;
 
     public String offset;
 }

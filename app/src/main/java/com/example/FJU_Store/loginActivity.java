@@ -33,7 +33,7 @@ public class loginActivity extends AppCompatActivity {
         Map<String, String> map = new HashMap<>();
         map.put("api_key", Config.API_KEY);
         map.put("view", "Grid%20view");
-        map.put("pageSize", "10");
+        map.put("pageSize", "50");
         final Call<ListRes> call = api.getUser(map);
 
         Button btn_login = findViewById(R.id.login);
@@ -62,12 +62,13 @@ public class loginActivity extends AppCompatActivity {
                             public void onResponse(Call<ListRes> call, Response<ListRes> response) {
                                 if (response.isSuccessful()) {
                                     ListRes listRes = response.body();
-                                    List<Res> resList = listRes.records;
+                                    List<user_Res> resList = listRes.records;
                                     //設置判斷器 1代表正確 , 0代表錯誤
                                     int flag = 0;
-                                    for (Res h : resList) {
+                                    for (user_Res h : resList) {
                                         String acc = h.fields.getEmail();
                                         String pass = h.fields.getUser_password();
+                                        Log.v("MainActivity", acc+" "+pass);
                                         //Log.v("MainActivity", "[EMail成功找到] " + acc);
                                         //Log.v("MainActivity", "[EMail成功找到] " + pass);
                                         //若比對帳號密碼正確更改判斷器數值
@@ -80,6 +81,7 @@ public class loginActivity extends AppCompatActivity {
 
                                     } else
                                         Toast.makeText(loginActivity.this, "錯誤", Toast.LENGTH_LONG).show();
+                                    //Log.v("MainActivity", mail+" "+passw);
                                 } else {
                                     Log.e("MainActivity", "連接失敗!");
                                 }
