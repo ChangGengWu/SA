@@ -1,24 +1,57 @@
 package com.example.FJU_Store;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable {
     private int product_id;
-    private int product_price;
+    private String product_price;
     private String product_name;
     private String product_site;
     private String product_level;
-    private int product_number;
+    private String product_number;
     private String product_date;
     private String seller_email;
     private String order_product;
     private String product_sub_1;
+    private String product_main ;
+
+    public String getProduct_restrict() {
+        return product_restric;
+    }
+
+    public void setProduct_restric(String product_restric) {
+        this.product_restric = product_restric;
+    }
+
+    private String product_restric;
+
+    public String getProduct_detail() {
+        return product_detail;
+    }
+
+    public void setProduct_detail(String product_detail) {
+        this.product_detail = product_detail;
+    }
+
+    private String product_detail;
+
+    public String getProduct_main() {
+        return product_main;
+    }
+
+    public void setProduct_main(String product_main) {
+        this.product_main = product_main;
+    }
+
+
     //沒有接圖片
     //FK欄位不確定
 
-   public Product(int product_id,int product_price,String product_name,String product_site,
+  /* public Product(int product_id,int product_price,String product_name,String product_site,
                   String product_level,int product_number,String product_date,String seller_email,
-                  String order_product,String product_sub_1){
+                  String order_product,String product_sub_1,String product_main ){
 
-   }
+   }*/
 
     public int getProduct_id() {
         return product_id;
@@ -28,12 +61,16 @@ public class Product {
         this.product_id = product_id;
     }
 
-    public int getProduct_price() {
+    public String getProduct_price() {
         return product_price;
     }
 
-    public void setProduct_price(int product_price) {
+    public void setProduct_price(String product_price) {
         this.product_price = product_price;
+    }
+
+    public String getProduct_sub_1() {
+        return product_sub_1;
     }
 
     public String getProduct_name() {
@@ -60,11 +97,11 @@ public class Product {
         this.product_level = product_level;
     }
 
-    public int getProduct_number() {
+    public String getProduct_number() {
         return product_number;
     }
 
-    public void setProduct_number(int product_number) {
+    public void setProduct_number(String product_number) {
         this.product_number = product_number;
     }
 
@@ -92,9 +129,7 @@ public class Product {
         this.order_product = order_product;
     }
 
-    public String getProduct_sub_1() {
-        return product_sub_1;
-    }
+
 
     public void setProduct_sub_1(String product_sub_1) {
         this.product_sub_1 = product_sub_1;
