@@ -23,12 +23,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import retrofit2.Call;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 //toast快顯文件
 
 public class IndexActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private ImageView iv; //照片iv
+    private ImageView wallpaper; //照片wallpaper
     private CollapsingToolbarLayout collapsingToolbarLayout;
     private Toolbar toolbar;
     private Toolbar toolbar_2;
@@ -44,6 +51,20 @@ public class IndexActivity extends AppCompatActivity
         setContentView(R.layout.activity_index);
 
 
+        //連接資料庫
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Config.BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        //使用map用法
+        product_API product_api = retrofit.create(product_API.class);
+        Map<String, String> map = new HashMap<>();
+        map.put("api_key", Config.API_KEY);
+        map.put("view", "Grid%20view");
+        map.put("pageSize", "50");
+        final Call<product_ListRes> call = product_api.getProduct(map);//選擇使用get方法
+
+
         //接登入者mail!!
         Intent toindex = getIntent();
         String getmail = toindex.getStringExtra("userMail");
@@ -51,7 +72,7 @@ public class IndexActivity extends AppCompatActivity
 
         //摺疊式Toolbar
         collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar_layout);
-        iv = (ImageView) findViewById(R.id.iv);
+        wallpaper = (ImageView) findViewById(R.id.wallpaper);
         toolbar_2 = (Toolbar) findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar_2);
@@ -59,7 +80,7 @@ public class IndexActivity extends AppCompatActivity
         collapsingToolbarLayout.setTitle("輔大二手商城");
         collapsingToolbarLayout.setCollapsedTitleTextColor(Color.WHITE);
         collapsingToolbarLayout.setExpandedTitleColor(Color.WHITE);
-        iv.setImageResource(R.drawable.iv);//iv
+        wallpaper.setImageResource(R.drawable.wallpaper);//wallpaper
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -120,7 +141,7 @@ public class IndexActivity extends AppCompatActivity
                 startActivity(toCatagory);
             }
         });
-        //系統功能暫時連到ErrorReportActivity
+        //系統功能(暫時)連到ErrorReportActivity
         Button btn_toErrorReport = findViewById(R.id.system_function);
         btn_toErrorReport.setOnClickListener(new View.OnClickListener() {
              public void onClick(View v){
@@ -209,7 +230,7 @@ public class IndexActivity extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
-
+    //navigation預設產生
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -229,7 +250,7 @@ public class IndexActivity extends AppCompatActivity
         } else if (id == R.id.nav_send) {
 
         }
-
+        //navigation預設產生
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

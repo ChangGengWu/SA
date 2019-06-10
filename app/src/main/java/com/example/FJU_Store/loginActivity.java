@@ -63,6 +63,7 @@ public class loginActivity extends AppCompatActivity {
                                 if (response.isSuccessful()) {
                                     ListRes listRes = response.body();
                                     List<user_Res> resList = listRes.records;
+
                                     //設置判斷器 1代表正確 , 0代表錯誤
                                     int flag = 0;
                                     for (user_Res h : resList) {
