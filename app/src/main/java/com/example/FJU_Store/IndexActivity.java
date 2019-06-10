@@ -61,7 +61,7 @@ public class IndexActivity extends AppCompatActivity
                 .baseUrl(Config.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-        //使用map用法
+        //使用map用法連接
         product_API product_api = retrofit.create(product_API.class);
         Map<String, String> map = new HashMap<>();
         map.put("api_key", Config.API_KEY);
@@ -75,37 +75,39 @@ public class IndexActivity extends AppCompatActivity
                 @Override
                 public void onResponse(Call<product_ListRes> call, Response<product_ListRes> response) {
                     if(response.isSuccessful()){
-                        product_ListRes p_ListRes = response.body();
-                        List<product_Res> p_resList = p_ListRes.records;
-
-
+                        product_ListRes p_ListRes = response.body();//airtable JSON資料讀入
+                        List<product_Res> p_resList = p_ListRes.records;//取得records(外層)資料
 
                         //flag_product = 1 is correct , 0 is failed.
                         int flag_product = 0;
                         int index = 1;
 
                         for(product_Res h : p_resList){
-                            String p_name = h.fields.getProduct_name();//循環取值
+                            String p_name = h.fields.getProduct_name();
                             int p_price = h.fields.getProduct_price();
-                            String product_name = h.fields.getProduct_name();
                             String[] product_sub_1 = h.fields.getProduct_sub_1();
                             String product_site = h.fields.getProduct_site();
                             String product_level = h.fields.getProduct_level();
                             int product_amount = h.fields.getProduct_amount();
 
-                            Log.v("MainActivity", "[產品名稱成功找到- "+ index +"]:"+ p_name);
+//                            Log.v("MainActivity", "[產品名稱找到- "+ index +"]:"+ p_name);
+//                            Log.v("MainActivity", "[產品價格找到- "+ index +"]:"+ p_price);
+//                            Log.v("MainActivity", "[產品面交位置找到- "+ index +"]:"+ product_site);
+//                            Log.v("MainActivity", "[產品新舊程度找到- "+ index +"]:"+ product_level);
+//                            Log.v("MainActivity", "[產品數量找到- "+ index +"]:"+ product_amount);
 
-                            //TextView showText_username = (TextView) findViewById(R.id.card_user_name_1);
-                            //TextView showText_product_name = (TextView) findViewById(R.id.card_product_name_1);
-                            //TextView showText_price = (TextView) findViewById(R.id.card_product_price_1);
-                           // if(index == 1){
-                                //showText_username.setText(index);
-                                //showText_product_name.setText(p_name);
-                                //showText_price.setText(p_price);
-                           //}
+                            TextView showText_username = (TextView) findViewById(R.id.card_user_name_1);
+                            TextView showText_product_name = (TextView) findViewById(R.id.card_product_name_1);
+                            TextView showText_price = (TextView) findViewById(R.id.card_product_price_1);
+                            if(index == 1){
+                                showText_username.setText(index);
+                                showText_product_name.setText(p_name);
+                                showText_price.setText(p_price);
+                            }
                             index ++;
-
                         }
+
+
                     }
                 }
 
