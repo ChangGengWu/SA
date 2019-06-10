@@ -5,5 +5,6 @@ public class user_Res {
 
     public com.example.FJU_Store.USER fields;
 
+    //public com.example.FJU_Store.Product fields;
     public String createdTime;
 }
