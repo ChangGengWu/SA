@@ -16,6 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -25,9 +26,12 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 //toast快顯文件
@@ -51,7 +55,7 @@ public class IndexActivity extends AppCompatActivity
         setContentView(R.layout.activity_index);
 
 
-        //連接資料庫
+        //初始化retrofit
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Config.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -65,10 +69,44 @@ public class IndexActivity extends AppCompatActivity
         final Call<product_ListRes> call = product_api.getProduct(map);//選擇使用get方法
 
 
-        //接登入者mail!!
+        try{
+            call.clone().enqueue(new Callback<product_ListRes>() {
+                @Override
+                public void onResponse(Call<product_ListRes> call, Response<product_ListRes> response) {
+                    if(response.isSuccessful()){
+                        product_ListRes p_ListRes = response.body();
+                        List<product_Res> p_resList = p_ListRes.records;
+
+
+
+                        //flag_product = 1 is correct , 0 is failed.
+                        int flag_product = 0;
+                        int index = 1;
+
+
+
+
+                        for(product_Res h : p_resList){
+                            String p_name = h.fields.getProduct_name();
+                            Log.v("MainActivity", "[產品名稱成功找到- "+ index +"]:"+ p_name);
+                            index ++;
+                        }
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<product_ListRes> call, Throwable t) {
+                    Log.d("product", "onFailure!!");
+                }
+            });
+        }catch(Exception e){
+        }
+
+        //接登入者mail!!(僅能顯示在logcat)
         Intent toindex = getIntent();
         String getmail = toindex.getStringExtra("userMail");
         //Log.v("user",getmail+"");
+
 
         //摺疊式Toolbar
         collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar_layout);

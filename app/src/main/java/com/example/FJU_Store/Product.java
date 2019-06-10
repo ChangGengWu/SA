@@ -1,7 +1,7 @@
 package com.example.FJU_Store;
 
 public class Product {
-    private int product_id;
+    private int product_id;//Primary Key
     //private String seller_email;
     private int product_price;
     private String product_name;
@@ -9,6 +9,7 @@ public class Product {
     private String product_site;
     private String product_level;
     private int product_amount;
+
 
     public Product(int product_id, int product_price, String product_name, String product_site, String product_level, int product_amount) {
         this.product_id = product_id;
