@@ -138,7 +138,7 @@ public class create_product_2_daily extends AppCompatActivity implements RadioGr
                     //intent.putExtra("book","書籍類");
 
                     Product_w product = new Product_w();
-                    product.setProduct_sub_1("其他類");
+                    product.setProduct_sub_1("其他日常用品類");
                     product.setProduct_main("日常用品類");
                     intent.putExtra("product_data", product);
 

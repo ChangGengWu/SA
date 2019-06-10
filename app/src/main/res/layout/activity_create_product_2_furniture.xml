@@ -40,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="床鋪類" />
+            android:text="床類" />
 
         <RadioButton
             android:id="@+id/furni_shower"
@@ -68,7 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="其他類" />
+            android:text="其他傢俱類" />
     </RadioGroup>
 
     <Button

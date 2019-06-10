@@ -38,7 +38,7 @@ public class create_product_2 extends AppCompatActivity implements CompoundButto
             public void onClick(View v) {
                 String msg="";
                 for(CompoundButton chk:selected){
-                    msg+=chk.getText()+"/";
+                    msg+=chk.getText();
                 }
                 Intent intent =new Intent(create_product_2.this,create_product_3.class);
                 Product_w product = new Product_w();

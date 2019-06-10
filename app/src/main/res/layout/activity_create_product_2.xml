@@ -29,7 +29,7 @@
         android:layout_marginTop="26dp"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
-        android:text="外國語言類"
+        android:text="外國語文類"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -158,7 +158,7 @@
         android:layout_marginTop="18dp"
         android:layout_marginEnd="25dp"
         android:layout_marginRight="25dp"
-        android:text="社會與心理類"
+        android:text="社會心理類"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/c12" />
 
@@ -200,7 +200,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
-        android:text="無分類"
+        android:text="其他書籍類"
         app:layout_constraintStart_toStartOf="@+id/c15"
         app:layout_constraintTop_toBottomOf="@+id/c15" />
 
@@ -218,7 +218,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="34dp"
-        android:text="請選擇書籍分類(多選)"
+        android:text="請選擇書籍分類(單選)"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/c2"
         app:layout_constraintStart_toEndOf="@+id/c2"
@@ -232,7 +232,6 @@
         android:layout_marginRight="15dp"
         android:layout_marginBottom="10dp"
         android:background="#26A69A"
-        android:onClick="goto_create_product_3"
         android:text="下一步"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
