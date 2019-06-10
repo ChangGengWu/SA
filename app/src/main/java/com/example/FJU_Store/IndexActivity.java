@@ -23,6 +23,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.HashMap;
@@ -83,13 +84,27 @@ public class IndexActivity extends AppCompatActivity
                         int flag_product = 0;
                         int index = 1;
 
-
-
-
                         for(product_Res h : p_resList){
-                            String p_name = h.fields.getProduct_name();
+                            String p_name = h.fields.getProduct_name();//循環取值
+                            int p_price = h.fields.getProduct_price();
+                            String product_name = h.fields.getProduct_name();
+                            String[] product_sub_1 = h.fields.getProduct_sub_1();
+                            String product_site = h.fields.getProduct_site();
+                            String product_level = h.fields.getProduct_level();
+                            int product_amount = h.fields.getProduct_amount();
+
                             Log.v("MainActivity", "[產品名稱成功找到- "+ index +"]:"+ p_name);
+
+                            //TextView showText_username = (TextView) findViewById(R.id.card_user_name_1);
+                            //TextView showText_product_name = (TextView) findViewById(R.id.card_product_name_1);
+                            //TextView showText_price = (TextView) findViewById(R.id.card_product_price_1);
+                           // if(index == 1){
+                                //showText_username.setText(index);
+                                //showText_product_name.setText(p_name);
+                                //showText_price.setText(p_price);
+                           //}
                             index ++;
+
                         }
                     }
                 }
