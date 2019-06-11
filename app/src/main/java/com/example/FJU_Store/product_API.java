@@ -12,6 +12,7 @@ public interface product_API {
     @GET("Product")//User?api_key=dowefijiejfw
     Call<product_ListRes> getProduct(@QueryMap(encoded = true) Map<String, String> queryMap);
 
+
     @POST("Product?api_key=keySEVC5l6huQZqzW")
     Call<product_Res> postProduct(@Body product_Req req);
 //
