@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class create_product_2_daily extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener, TextWatcher {
 
@@ -51,6 +52,8 @@ public class create_product_2_daily extends AppCompatActivity implements RadioGr
     }
 
     protected void choose() {
+
+
          if (daily_category.getCheckedRadioButtonId() == R.id.daily_shower) {
 
             Button next_daily = findViewById(R.id.next_daily);
@@ -146,6 +149,9 @@ public class create_product_2_daily extends AppCompatActivity implements RadioGr
                 }
             });
         }
+         else{
+             Toast.makeText(create_product_2_daily.this, "請選擇一個類別!", Toast.LENGTH_LONG).show();
+         }
 
     }
 

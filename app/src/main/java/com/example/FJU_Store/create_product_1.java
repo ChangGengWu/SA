@@ -8,6 +8,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class create_product_1 extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener, TextWatcher {
 
@@ -82,7 +83,7 @@ public class create_product_1 extends AppCompatActivity implements RadioGroup.On
 
         }
 
-        else{
+        else if(product_category.getCheckedRadioButtonId()==R.id.daily_necessities){
             Button score=findViewById(R.id.score);
             score.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -95,6 +96,9 @@ public class create_product_1 extends AppCompatActivity implements RadioGroup.On
                     startActivity(intent);
                 }
             });
+        }
+        else if(product_category.getCheckedRadioButtonId()==-1){
+            Toast.makeText(create_product_1.this, "請選擇一個類別!", Toast.LENGTH_LONG).show();
         }
     }
 }

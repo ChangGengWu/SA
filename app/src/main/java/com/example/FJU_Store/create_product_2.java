@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -47,10 +48,26 @@ public class create_product_2 extends AppCompatActivity implements CompoundButto
                 product.setProduct_sub_1(msg);
                 intent.putExtra("product_data",product);
 
+                try{
+                    if(msg==""){
+                        Toast.makeText(create_product_2.this, "請選擇一個類別!", Toast.LENGTH_LONG).show();
+                    }
+                    else{
+                        startActivity(intent);
 
-                startActivity(intent);
+                    }
+
+                }
+                catch(Exception e){
+
+                }
+
+
+
             }
         });
+
+
 
     }
 
@@ -69,4 +86,7 @@ public class create_product_2 extends AppCompatActivity implements CompoundButto
             selected.remove(buttonView);
         }
     }
+
+
+
 }

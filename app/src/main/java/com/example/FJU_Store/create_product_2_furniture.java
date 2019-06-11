@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class create_product_2_furniture extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener, TextWatcher {
 
@@ -155,6 +156,9 @@ public class create_product_2_furniture extends AppCompatActivity implements Rad
                     startActivity(intent);
                 }
             });
+        }
+        else{
+            Toast.makeText(create_product_2_furniture.this, "請選擇一個類別!", Toast.LENGTH_LONG).show();
         }
     }
 
