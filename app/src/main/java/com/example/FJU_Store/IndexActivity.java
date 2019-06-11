@@ -44,6 +44,9 @@ public class IndexActivity extends AppCompatActivity
     private CollapsingToolbarLayout collapsingToolbarLayout;
     private Toolbar toolbar;
     private Toolbar toolbar_2;
+    TextView showText_username;
+    TextView showText_product_name;
+    TextView showText_price;
     CardView c1;
 
     public IndexActivity() {
@@ -54,6 +57,9 @@ public class IndexActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_index);
+        showText_price = (TextView) findViewById(R.id.card_product_price_1);
+        showText_product_name = (TextView) findViewById(R.id.card_product_name_1);
+        showText_username = (TextView) findViewById(R.id.card_user_name_1);
 
 
         //初始化retrofit
@@ -83,6 +89,7 @@ public class IndexActivity extends AppCompatActivity
                         int index = 1;
 
                         for(product_Res h : p_resList){
+
                             String p_name = h.fields.getProduct_name();
                             int p_price = h.fields.getProduct_price();
                             String[] product_sub_1 = h.fields.getProduct_sub_1();
@@ -96,11 +103,8 @@ public class IndexActivity extends AppCompatActivity
 //                            Log.v("MainActivity", "[產品新舊程度找到- "+ index +"]:"+ product_level);
 //                            Log.v("MainActivity", "[產品數量找到- "+ index +"]:"+ product_amount);
 
-                            TextView showText_username = (TextView) findViewById(R.id.card_user_name_1);
-                            TextView showText_product_name = (TextView) findViewById(R.id.card_product_name_1);
-                            TextView showText_price = (TextView) findViewById(R.id.card_product_price_1);
+
                             if(index == 1){
-                                showText_username.setText(index);
                                 showText_product_name.setText(p_name);
                                 showText_price.setText(p_price);
                             }

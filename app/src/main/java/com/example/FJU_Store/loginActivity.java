@@ -77,6 +77,7 @@ public class loginActivity extends AppCompatActivity {
                                         if (acc.equals(mail) && pass.equals(passw)) flag = 1;
                                     }
                                     if (flag == 1) {
+
                                         //Intent login = new Intent(loginActivity.this,indexActivity.class);
                                         //startActivity(login);
 
