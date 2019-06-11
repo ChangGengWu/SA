@@ -53,10 +53,10 @@ public class loginActivity extends AppCompatActivity {
                 EditText password = findViewById(R.id.password);
                 final String mail = email.getText().toString().trim();
                 final String passw = password.getText().toString().trim();
-
+                Log.v("test",mail+" "+passw);
                 //判斷是否填入值
                 try {
-                    if (checkAsset(mail, passw)) {
+                    if(checkAsset(mail, passw)) {
                         call.clone().enqueue(new Callback<ListRes>() {
                             @Override
                             public void onResponse(Call<ListRes> call, Response<ListRes> response) {
@@ -68,8 +68,8 @@ public class loginActivity extends AppCompatActivity {
                                     for (user_Res h : resList) {
                                         String acc = h.fields.getEmail();
                                         String pass = h.fields.getUser_password();
-                                        String userName = h.fields.getUser_name();
-                                        Log.v("MainActivity", acc+" "+pass);
+                                        //String userName = h.fields.getUser_name();
+                                        //Log.v("MainActivity", acc+" "+pass);
                                         //Log.v("MainActivity", "[EMail成功找到] " + acc);
                                         //Log.v("MainActivity", "[EMail成功找到] " + pass);
                                         //若比對帳號密碼正確更改判斷器數值

@@ -1,17 +1,17 @@
 package com.example.FJU_Store;
 
 public class Product {
-    private int product_id;
+    private Integer product_id = null;
     //private String seller_email;
     private int product_price;
     private String product_name;
     private String[] product_sub_1;
+    private String[] product_sub_name;
     private String product_site;
     private String product_level;
     private int product_amount;
 
-    public Product(int product_id, int product_price, String product_name, String product_site, String product_level, int product_amount) {
-        this.product_id = product_id;
+    public Product(int product_price, String product_name, String product_site, String product_level, int product_amount) {
         //this.seller_email = seller_email;
         this.product_price = product_price;
         this.product_name = product_name;
