@@ -2,7 +2,7 @@ package com.example.FJU_Store;
 
 public class catagory_book_item {
     private String mImageUrl;//照片
-    private String mCreator;//創作者name
+    private String mCreator;//創作者名字
     private int mLikes;//按讚數
 
     public catagory_book_item(String ImageUrl, String Creator ,int likes){
@@ -10,6 +10,7 @@ public class catagory_book_item {
         mCreator = Creator;
         mLikes = likes;
     }
+    //getters
     public String getmImageUrl(){
         return  mImageUrl;
     }

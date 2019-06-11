@@ -1,5 +1,6 @@
 package com.example.FJU_Store;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,6 +9,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -24,64 +26,22 @@ import java.util.ArrayList;
 
 //import com.example.login.R;
 
-
-public class Catagory_Activity extends AppCompatActivity {
-    private RecyclerView mRecyclerView;
-    private catagoryAdapter mcatagoryAdapter;
-    private ArrayList<catagory_book_item> mcatagoryList;
-    private RequestQueue mRequestQueue;
+//main_activity
+public class Catagory_Activity extends AppCompatActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_catagory);
-
-        mRecyclerView = findViewById(R.id.recycler_view);
-        mRecyclerView.setHasFixedSize(true);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        mcatagoryList = new ArrayList<>();
-
-        mRequestQueue = Volley.newRequestQueue(this);
-        parseJSON();
+        //至books_資訊類
+        Button toBooks = findViewById(R.id.informaton);
+        toBooks.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v){
+                Intent toBooks = new Intent(Catagory_Activity.this,Catagory_Book_Activity.class);
+                startActivity(toBooks);
+            }
+        });
 
     }
 
-    private void parseJSON(){
-        String url = "https://pixabay.com/api/?key=12745206-236e25a4010b958a93f2a9421&q=yellow+flowers&image_type=photo&pretty=true";
-
-        //與hit有關
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
-                new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        try {
-                            JSONArray jsonArray = response.getJSONArray("hits");
-                            //hit裡的所有東西
-                            for (int i = 0; i< jsonArray.length();i++)  {
-                                JSONObject hit = jsonArray.getJSONObject(i);
-
-                                String creatorName = hit.getString("user");//
-                                String imageUrl = hit.getString("webformatURL");//
-                                int likeCount = hit.getInt("likes");//
-
-                                mcatagoryList.add(new catagory_book_item(imageUrl,creatorName,likeCount));
-                            }
-
-                            mcatagoryAdapter = new catagoryAdapter(Catagory_Activity.this, mcatagoryList);
-                            mRecyclerView.setAdapter(mcatagoryAdapter);
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                },new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                        error.printStackTrace();
-                    }
-                });
-
-        mRequestQueue.add(request);
-    }
 }

@@ -13,15 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".DetailActivity"></activity>
         <activity android:name=".Catagory_Book_Activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-        </activity>
-        <!-- 陳致宇:accept_order -->
+        </activity> <!-- 陳致宇:accept_order -->
         <activity android:name=".accept_orderActivity" />
         <activity android:name=".OrderActivity" />
         <activity android:name=".order_record" />
@@ -92,6 +87,12 @@
         <activity android:name=".enrollActivity" />
         <activity android:name=".verifyActivity" />
         <activity android:name=".loginActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
     </application>

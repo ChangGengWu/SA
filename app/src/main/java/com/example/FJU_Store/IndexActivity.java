@@ -88,28 +88,28 @@ public class IndexActivity extends AppCompatActivity
                         int flag_product = 0;
                         int index = 1;
 
-                        for(product_Res h : p_resList){
-
-                            String p_name = h.fields.getProduct_name();
-                            int p_price = h.fields.getProduct_price();
-                            String[] product_sub_1 = h.fields.getProduct_sub_1();
-                            String product_site = h.fields.getProduct_site();
-                            String product_level = h.fields.getProduct_level();
-                            int product_amount = h.fields.getProduct_amount();
-
-//                            Log.v("MainActivity", "[產品名稱找到- "+ index +"]:"+ p_name);
-//                            Log.v("MainActivity", "[產品價格找到- "+ index +"]:"+ p_price);
-//                            Log.v("MainActivity", "[產品面交位置找到- "+ index +"]:"+ product_site);
-//                            Log.v("MainActivity", "[產品新舊程度找到- "+ index +"]:"+ product_level);
-//                            Log.v("MainActivity", "[產品數量找到- "+ index +"]:"+ product_amount);
-
-
-                            if(index == 1){
-                                showText_product_name.setText(p_name);
-                                showText_price.setText(p_price);
-                            }
-                            index ++;
-                        }
+//                        for(product_Res h : p_resList){
+//
+////                            String p_name = h.fields.getProduct_name();
+////                            int p_price = h.fields.getProduct_price();
+////                            String[] product_sub_1 = h.fields.getProduct_sub_1();
+////                            String product_site = h.fields.getProduct_site();
+////                            String product_level = h.fields.getProduct_level();
+////                            int product_amount = h.fields.getProduct_amount();
+//
+////                            Log.v("MainActivity", "[產品名稱找到- "+ index +"]:"+ p_name);
+////                            Log.v("MainActivity", "[產品價格找到- "+ index +"]:"+ p_price);
+////                            Log.v("MainActivity", "[產品面交位置找到- "+ index +"]:"+ product_site);
+////                            Log.v("MainActivity", "[產品新舊程度找到- "+ index +"]:"+ product_level);
+////                            Log.v("MainActivity", "[產品數量找到- "+ index +"]:"+ product_amount);
+//
+//
+//                            if(index == 1){
+//                                showText_product_name.setText(p_name);
+//                                showText_price.setText(p_price);
+//                            }
+//                            index ++;
+//                        }
 
 
                     }
