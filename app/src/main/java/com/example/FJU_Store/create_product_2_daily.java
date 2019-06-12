@@ -38,17 +38,19 @@ public class create_product_2_daily extends AppCompatActivity implements RadioGr
 
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int count) {
-
+        //Toast.makeText(create_product_2_daily.this, "請選擇一個類別!", Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void afterTextChanged(Editable s) {
         choose();
+        //Toast.makeText(create_product_2_daily.this, "請選擇一個類別!", Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
         choose();
+        //Toast.makeText(create_product_2_daily.this, "請選擇一個類別!", Toast.LENGTH_LONG).show();
     }
 
     protected void choose() {
