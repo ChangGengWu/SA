@@ -188,7 +188,8 @@ public class OrderActivity extends AppCompatActivity {
                     // 指定要呼叫的 Activity Class
                     Intent newAct = new Intent();
                     newAct.setClass(OrderActivity.this, after_order.class );
-                    newAct.putExtra("IDID",intId);
+                    Log.v("1",intId+"");
+                    newAct.putExtra("IDID",Integer.toString(intId));
                     startActivity( newAct );
                     // 結束原先的 Activity Class
                     OrderActivity.this.finish();

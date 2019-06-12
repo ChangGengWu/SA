@@ -2,13 +2,13 @@ package com.example.FJU_Store;
 
 public class Order {
     private Integer order_id = null;
-    private String[] order_product_id;
+    private String[] ordered_product_id;
     private String order_status;
     private String[] order_buyer;
     private String wish_date;
 
-    public Order(String[] order_product_id, String order_status, String[] order_buyer) {
-        this.order_product_id = order_product_id;
+    public Order(String[] ordered_product_id,String order_status,String[] order_buyer) {
+        this.ordered_product_id = ordered_product_id;
         this.order_status = order_status;
         this.order_buyer = order_buyer;
     }
@@ -21,12 +21,12 @@ public class Order {
         this.order_id = order_id;
     }
 
-    public String[] getOrder_product_id() {
-        return order_product_id;
+    public String[] getOrdered_product_id() {
+        return ordered_product_id;
     }
 
-    public void setOrder_product_id(String[] order_product_id) {
-        this.order_product_id = order_product_id;
+    public void setOrdered_product_id(String[] ordered_product_id) {
+        this.ordered_product_id = ordered_product_id;
     }
 
     public String getOrder_status() {

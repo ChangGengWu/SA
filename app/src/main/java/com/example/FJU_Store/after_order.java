@@ -31,7 +31,7 @@ public class after_order extends AppCompatActivity {
 
         //Log.v("22",Buyer_info.mail);
         Intent int2 = getIntent();
-        String n = int2.getStringExtra("id");
+        String n = int2.getStringExtra("IDID");
         final String[] p_id = new String[1];
         final String[] buyer_m = new String[1];
         buyer_m[0] = Buyer_info.mail;
@@ -47,13 +47,14 @@ public class after_order extends AppCompatActivity {
         IwantIt.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v){
 
-                Order order = new Order(p_id,"未交易",buyer_m);
+                final Order order = new Order(p_id,"未交易",buyer_m);
                 Call<order_Res> call = api.postOrder(new order_Req(order));
 
                 call.enqueue(new Callback<order_Res>() {
                     @Override
                     public void onResponse(Call<order_Res> call, Response<order_Res> response) {
                         Toast.makeText(after_order.this,"下單成功",Toast.LENGTH_LONG);
+                        Log.v("content","下單成功!");
                         Log.v("Order",response.raw()+"");
                     }
 

@@ -85,7 +85,8 @@ public class MyAdapter2 extends RecyclerView.Adapter<MyAdapter2.ViewHolder>
                                 for (order_Res h: resList){
                                     String each = h.id.toString();
                                     //String st = h.fields.getOrder_status();
-                                    Log.v("MainActivity" , "Order： "+"\t"+ each+"\t");}
+                                    //Log.v("MainActivity" , "Order： "+"\t"+ each+"\t");
+                                }
                                 Log.e("MainActivity", response.raw() + "");
                             }
                             else {
