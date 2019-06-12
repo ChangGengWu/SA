@@ -70,9 +70,9 @@ Button upload_btn;
         final String P_site = product_data.getProduct_site();
         final String P_price = product_data.getProduct_price();
         final String P_amount = product_data.getProduct_number();
-        String P_detail = product_data.getProduct_detail();
+        final String P_detail = product_data.getProduct_detail();
         final String P_level = product_data.getProduct_level();
-        String P_restrict = product_data.getProduct_restrict();
+        final String P_restrict = product_data.getProduct_restrict();
 
         p_name.setText(P_name);
         p_site.setText(P_site);
@@ -91,7 +91,7 @@ Button upload_btn;
         upload_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Product product = new Product(seller,Integer.parseInt(P_price),P_name,P_site,P_level,Integer.parseInt(P_amount),sub);
+                Product product = new Product(seller,Integer.parseInt(P_price),P_name,P_site,P_level,Integer.parseInt(P_amount),sub,P_restrict,P_detail);
                 Call<product_Res> call = api.postProduct(new product_Req(product));
                 call.enqueue(new Callback<product_Res>() {
                     @Override

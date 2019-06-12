@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <LinearLayout
+        android:id="@+id/eachItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtItem"
+            android:layout_width="100dp"
+            android:textSize="14dp"
+            android:layout_height="100dp"/>
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="100dp"
+            android:textSize="14dp"
+            android:layout_height="100dp"/>
+
+        <Button
+            android:id="@+id/toItem"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="123"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!--陳致宇:accept_order-->
+        <activity android:name=".CateActivity"></activity>
+        <activity android:name=".EachSubActivity" /> <!-- 陳致宇:accept_order -->
         <activity android:name=".accept_orderActivity" />
         <activity android:name=".OrderActivity" />
         <activity android:name=".order_record" />

@@ -117,6 +117,9 @@ public class IndexActivity extends AppCompatActivity
             public void onClick(View v) {
 
                 Intent toCatagory = new Intent(IndexActivity.this,Catagory_Activity.class);
+                Buyer_info info = new Buyer_info();
+                info.mail = getmail;
+                toCatagory.putExtra("mail",info);
                 startActivity(toCatagory);
             }
         });

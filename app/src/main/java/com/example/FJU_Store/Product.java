@@ -10,8 +10,10 @@ public class Product {
     private String product_site;
     private String product_level;
     private int product_amount;
+    private String product_limit;
+    private String product_content;
 
-    public Product(String[] seller_email,int product_price, String product_name, String product_site, String product_level, int product_amount,String[] product_sub_1) {
+    public Product(String[] seller_email,int product_price, String product_name, String product_site, String product_level, int product_amount,String[] product_sub_1,String product_limit,String product_content) {
         this.seller_email = seller_email;
         this.product_price = product_price;
         this.product_name = product_name;
@@ -19,6 +21,9 @@ public class Product {
         this.product_site = product_site;
         this.product_level = product_level;
         this.product_amount = product_amount;
+        this.product_limit = product_limit;
+        this.product_content = product_content;
+
     }
 
     public int getProduct_id() {
@@ -83,5 +88,29 @@ public class Product {
 
     public void setProduct_amount(int product_amount) {
         this.product_amount = product_amount;
+    }
+
+    public String[] getProduct_sub_name() {
+        return product_sub_name;
+    }
+
+    public void setProduct_sub_name(String[] product_sub_name) {
+        this.product_sub_name = product_sub_name;
+    }
+
+    public String getProduct_limit() {
+        return product_limit;
+    }
+
+    public void setProduct_limit(String product_limit) {
+        this.product_limit = product_limit;
+    }
+
+    public String getProduct_content() {
+        return product_content;
+    }
+
+    public void setProduct_content(String product_content) {
+        this.product_content = product_content;
     }
 }

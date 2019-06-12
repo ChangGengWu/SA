@@ -15,21 +15,105 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class OrderActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
     private List<PageView> pageList;
+    private TextView p_name;
+    private TextView p_type;
+    private TextView p_level;
+    private TextView p_amount;
+    private TextView p_site;
+    private TextView p_star;
+    private TextView p_content;
+    private TextView p_price;
+    String id;
+    int intId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
+
+        Intent intent4 = getIntent();
+        Buyer_info id = (Buyer_info) intent4.getSerializableExtra("id");
+        intId = Integer.parseInt(id.getItem_id());
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Config.BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        product_API api = retrofit.create(product_API.class);
+        Map<String, String> map = new HashMap<>();
+
+        map.put("api_key", Config.API_KEY);
+        map.put("view", "Grid%20view");
+        map.put("pageSize", "10");
+        Call<product_ListRes> call = api.getProduct(map);
+
+        call.enqueue(new Callback<product_ListRes>() {
+            @Override
+            public void onResponse(Call<product_ListRes> call, Response<product_ListRes> response) {
+                if(response.isSuccessful()){
+                    product_ListRes listRes = response.body();
+                    List<product_Res> resList =  listRes.records;
+                    for (product_Res h: resList){
+                        int idid = h.fields.getProduct_id();
+                        if(idid == intId){
+                        String p_name1 = h.fields.getProduct_name();
+                        String[] type_1 = h.fields.getProduct_sub_name();
+                        String site = h.fields.getProduct_site();
+                        String name = h.fields.getProduct_name();
+                        String level = h.fields.getProduct_level();
+                        int amount = h.fields.getProduct_amount();
+                        String limit = h.fields.getProduct_limit();
+                        String content = h.fields.getProduct_content();
+                        int price = h.fields.getProduct_price();
+                        p_name = findViewById(R.id.title0_2);
+                        p_name.setText(p_name1);
+                        p_price = findViewById(R.id.title0_4);
+                        p_price.setText("$"+Integer.toString(price));
+                        p_level = findViewById(R.id.title1_4);
+                        p_level.setText(level);
+                        p_amount = findViewById(R.id.title1_6);
+                        p_amount.setText(Integer.toString(amount));
+                        p_site = findViewById(R.id.title1_8);
+                        p_site.setText(site);
+                        p_type = findViewById(R.id.title1_2);
+                        p_type.setText(type_1[0]);
+                        p_star = findViewById(R.id.title1_10);
+                        p_star.setText(limit);
+                        p_content = findViewById(R.id.title2_3);
+                        p_content.setText(content);
+                        Log.v("MainActivity" , "Product： " + p_name+"\t" + type_1[0]);
+                        };
+                    }
+                }
+                Log.e("MainActivity", response.raw() + "");//code=200
+            }
+            @Override
+            public void onFailure(Call<product_ListRes> call, Throwable t) {
+                Log.e("MainActivity", t.getMessage() + "");
+            }
+        });
+
+        Log.v("測試", id+"");
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -104,7 +188,7 @@ public class OrderActivity extends AppCompatActivity {
                     // 指定要呼叫的 Activity Class
                     Intent newAct = new Intent();
                     newAct.setClass(OrderActivity.this, after_order.class );
-                    // 呼叫新的 Activity Class
+                    newAct.putExtra("IDID",intId);
                     startActivity( newAct );
                     // 結束原先的 Activity Class
                     OrderActivity.this.finish();
