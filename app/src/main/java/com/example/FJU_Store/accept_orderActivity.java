@@ -1,7 +1,7 @@
 package com.example.FJU_Store;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -17,15 +17,12 @@ public class accept_orderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accept_order);
 
-        List<accept_order_item> list = new ArrayList<>();
+        final List<accept_order_item> list = new ArrayList<>();
 
-        list.add(new accept_order_item(android.R.drawable.star_big_on, "12345678"));
-        list.add(new accept_order_item(android.R.drawable.alert_dark_frame, "vevwevwe"));
-        list.add(new accept_order_item(android.R.drawable.progress_horizontal, "12evev345678"));
-        list.add(new accept_order_item(android.R.drawable.star_big_off, "rgrgrgr"));
+        list.add(new accept_order_item(android.R.drawable.star_big_on, "aaa"));
 
-        listView = (ListView) findViewById(R.id.list_item);
         myAdapter = new MyAdapter(this, list);
+        listView = (ListView) findViewById(R.id.list_item);
         listView.setAdapter(myAdapter);
     }
 }

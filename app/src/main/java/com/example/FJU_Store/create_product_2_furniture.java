@@ -148,7 +148,7 @@ public class create_product_2_furniture extends AppCompatActivity implements Rad
                     //intent.putExtra("book","書籍類");
 
                     Product_w product = new Product_w();
-                    product.setProduct_sub_1("其他類");
+                    product.setProduct_sub_1("其他傢俱類");
                     product.setProduct_main("傢具類");
                     intent.putExtra("product_data",product);
 

@@ -26,6 +26,7 @@ public class create_product_1 extends AppCompatActivity implements RadioGroup.On
 
 
 
+
     }
 
 
@@ -58,8 +59,10 @@ public class create_product_1 extends AppCompatActivity implements RadioGroup.On
                 public void onClick(View v) {
                     Intent intent =new Intent(create_product_1.this,create_product_2.class);
                     //intent.putExtra("book","書籍類");
-
+                    Intent intent2 = getIntent();
+                    final String mail = intent2.getStringExtra("mail");
                     Product_w product = new Product_w();
+                    product.setSeller_email(mail);
                     product.setProduct_main("書籍類");
                     intent.putExtra("product_data",product);
 

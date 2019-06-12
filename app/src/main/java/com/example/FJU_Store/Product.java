@@ -2,7 +2,7 @@ package com.example.FJU_Store;
 
 public class Product {
     private Integer product_id = null;
-    //private String seller_email;
+    private String[] seller_email;
     private int product_price;
     private String product_name;
     private String[] product_sub_1;
@@ -11,11 +11,11 @@ public class Product {
     private String product_level;
     private int product_amount;
 
-    public Product(int product_price, String product_name, String product_site, String product_level, int product_amount) {
-        //this.seller_email = seller_email;
+    public Product(String[] seller_email,int product_price, String product_name, String product_site, String product_level, int product_amount,String[] product_sub_1) {
+        this.seller_email = seller_email;
         this.product_price = product_price;
         this.product_name = product_name;
-        //this.product_sub_1 = product_sub_1;
+        this.product_sub_1 = product_sub_1;
         this.product_site = product_site;
         this.product_level = product_level;
         this.product_amount = product_amount;

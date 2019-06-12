@@ -1,16 +1,13 @@
 package com.example.FJU_Store;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -38,14 +35,15 @@ public class create_product_2 extends AppCompatActivity implements CompoundButto
             public void onClick(View v) {
                 String msg="";
                 for(CompoundButton chk:selected){
-                    msg+=chk.getText()+"/";
+                    msg+=chk.getText();
                 }
                 Intent intent =new Intent(create_product_2.this,create_product_3.class);
-                Product_w product = new Product_w();
-                product_data.getProduct_main();
-                product.setProduct_main("書籍類");
-                product.setProduct_sub_1(msg);
-                intent.putExtra("product_data",product);
+//                Product_w product = new Product_w();
+//                product_data.getProduct_main();
+//                product.setProduct_main("書籍類");
+                product_data.setProduct_sub_1(msg);
+                intent.putExtra("product_data",product_data);
+                Log.v("MAIL",product_data.getSeller_email());
 
 
                 startActivity(intent);

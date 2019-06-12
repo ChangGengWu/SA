@@ -46,7 +46,7 @@ public class IndexActivity extends AppCompatActivity
 
         //接登入者mail!!
         Intent toindex = getIntent();
-        String getmail = toindex.getStringExtra("userMail");
+        final String getmail = toindex.getStringExtra("userMail");
         //Log.v("user",getmail+"");
 
         //摺疊式Toolbar
@@ -135,6 +135,7 @@ public class IndexActivity extends AppCompatActivity
             public void onClick(View v){
 
                 Intent upload = new Intent(IndexActivity.this,create_product_1.class);
+                upload.putExtra("mail",getmail);
                 startActivity(upload);
             }
         });

@@ -1,10 +1,12 @@
 package com.example.FJU_Store;
 
 public class Order {
+    private String id;
     private int order_id;
     //private int order_product_id;
     private String order_status;
     //private String order_buyer;
+
 
     public Order(int order_id, String order_status) {
         this.order_id = order_id;

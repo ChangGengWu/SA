@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="盆洗用品類" />
+            android:text="盥洗用品類" />
 
         <RadioButton
             android:id="@+id/daily_stationary"
@@ -68,7 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="其他類" />
+            android:text="其他日常用品類" />
     </RadioGroup>
 
     <Button

@@ -1,11 +1,12 @@
 package com.example.FJU_Store;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class verifyActivity extends AppCompatActivity {
 
@@ -21,21 +22,26 @@ public class verifyActivity extends AppCompatActivity {
                 EditText email = findViewById(R.id.enroll_email);
                 String getmail = email.getText().toString();
                 Intent intent = new Intent(verifyActivity.this,enrollActivity.class);
-                intent.putExtra("sentMail",getmail);
-                startActivity(intent);
+                if(getmail.matches("")){
+                    Toast.makeText(verifyActivity.this,"請填寫驗證信箱",Toast.LENGTH_LONG).show();
+                }
+                else {
+                    intent.putExtra("sentMail", getmail);
+                    startActivity(intent);
+                }
 
             }
         });
         //長耕借我一個button連到我的主畫面測試一下~~~~~~~~~~^^
         //喔是喔
         Button btn_Index = findViewById(R.id.send);
-        btn_Index.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent toIndex = new Intent(verifyActivity.this,IndexActivity.class);
-                startActivity(toIndex);
-            }
-        });
+//        btn_Index.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                Intent toIndex = new Intent(verifyActivity.this,IndexActivity.class);
+//                startActivity(toIndex);
+//            }
+//        });
     }
 }
