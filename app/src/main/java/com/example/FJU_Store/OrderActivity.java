@@ -64,7 +64,7 @@ public class OrderActivity extends AppCompatActivity {
 
         map.put("api_key", Config.API_KEY);
         map.put("view", "Grid%20view");
-        map.put("pageSize", "10");
+        map.put("pageSize", "50");
         Call<product_ListRes> call = api.getProduct(map);
 
         call.enqueue(new Callback<product_ListRes>() {

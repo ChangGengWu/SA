@@ -15,6 +15,7 @@ public class order_record extends AppCompatActivity {
         setContentView(R.layout.activity_order_record);
 
         Button bt1_btn = findViewById(R.id.bt1);
+        Button home = findViewById(R.id.home);
 
         Toolbar toolbar2 = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar2);
@@ -32,6 +33,16 @@ public class order_record extends AppCompatActivity {
                 startActivity( newAct );
                 // 結束原先的 Activity Class
                 order_record.this.finish();
+            }
+        });
+
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent home = new Intent();
+                home.setClass(order_record.this, IndexActivity.class );
+                // 呼叫新的 Activity Class
+                startActivity(home);
             }
         });
 

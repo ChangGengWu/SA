@@ -54,8 +54,8 @@ public class after_order extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<order_Res> call, Response<order_Res> response) {
                         Toast.makeText(after_order.this,"下單成功",Toast.LENGTH_LONG);
-                        Log.v("content","下單成功!");
-                        Log.v("Order",response.raw()+"");
+                        Intent IwantIt = new Intent(after_order.this,order_record.class);
+                        startActivity(IwantIt);
                     }
 
                     @Override
@@ -64,8 +64,7 @@ public class after_order extends AppCompatActivity {
                     }
                 });
 
-                Intent IwantIt = new Intent(after_order.this,accept_orderActivity.class);
-                startActivity(IwantIt);
+
             }
         });
 

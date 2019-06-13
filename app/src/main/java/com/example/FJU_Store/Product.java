@@ -3,6 +3,7 @@ package com.example.FJU_Store;
 public class Product {
     private Integer product_id = null;
     private String[] seller_email;
+    private String[] user_rmail;
     private int product_price;
     private String product_name;
     private String[] product_sub_1;
@@ -12,6 +13,7 @@ public class Product {
     private int product_amount;
     private String product_limit;
     private String product_content;
+    private String[] user_name;
 
     public Product(String[] seller_email,int product_price, String product_name, String product_site, String product_level, int product_amount,String[] product_sub_1,String product_limit,String product_content) {
         this.seller_email = seller_email;
@@ -34,13 +36,13 @@ public class Product {
         this.product_id = product_id;
     }
 
-//    public String getSeller_email() {
-//        return seller_email;
-//    }
-//
-//    public void setSeller_email(String seller_email) {
-//        this.seller_email = seller_email;
-//    }
+    public String[] getSeller_email() {
+        return seller_email;
+    }
+
+    public void setSeller_email(String[] seller_email) {
+        this.seller_email = seller_email;
+    }
 
     public int getProduct_price() {
         return product_price;
@@ -112,5 +114,21 @@ public class Product {
 
     public void setProduct_content(String product_content) {
         this.product_content = product_content;
+    }
+
+    public String[] getUser_rmail() {
+        return user_rmail;
+    }
+
+    public void setUser_rmail(String[] user_rmail) {
+        this.user_rmail = user_rmail;
+    }
+
+    public String[] getUser_name() {
+        return user_name;
+    }
+
+    public void setUser_name(String[] user_name) {
+        this.user_name = user_name;
     }
 }

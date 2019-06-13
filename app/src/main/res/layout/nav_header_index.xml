@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--android:background="@drawable/side_nav_bar"-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#D0D5DB"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/side_nav_bar"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="#0097a7"
+        android:layout_height="123dp"
+        android:background="@drawable/menu_background"
         android:orientation="horizontal">
 
         <TextView
@@ -19,9 +20,9 @@
             android:layout_marginStart="24dp"
             android:layout_marginLeft="24dp"
             android:paddingBottom="8dp"
-            android:text="吳長耕 您好"
+            android:text="使用者 您好"
             android:textColor="#fff"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -31,9 +32,9 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btn1"
@@ -42,8 +43,9 @@
                 android:layout_weight="1"
                 android:background="@color/colorPrimary"
                 android:drawableTop="@android:drawable/ic_menu_save"
-                android:padding="5dp"
-                android:text="賣家" />
+                android:padding="7dp"
+                android:text="瀏覽紀錄"
+                android:textColor="@android:color/background_light" />
 
             <Button
                 android:id="@+id/btn2"
@@ -52,82 +54,99 @@
                 android:layout_weight="1"
                 android:background="@color/colorPrimary"
                 android:drawableTop="@android:drawable/ic_menu_save"
-                android:padding="5dp"
-                android:text="買家" />
+                android:text="收藏商品"
+                android:textColor="@android:color/background_light" />
 
             <Button
                 android:id="@+id/btn3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/colorPrimary"
-                android:drawableTop="@android:drawable/btn_star_big_on"
-                android:padding="5dp"
-                android:text="上架" />
+                android:background="@color/colorPrimaryDark"
+                android:drawableTop="@android:drawable/stat_sys_upload"
+                android:paddingTop="15dp"
+                android:paddingBottom="6dp"
+                android:text="商品上架"
+                android:textColor="@android:color/background_light" />
+
         </LinearLayout>
 
-        <LinearLayout
+        <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:fillViewport="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/seller"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:text="賣家" />
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/buyer"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:text="買家" />
+                    <Button
+                        android:id="@+id/seller"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="賣家/上架商品" />
 
-                <Button
-                    android:id="@+id/chat"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:text="聊天室" />
+                    <Button
+                        android:id="@+id/buyer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="買家/下單商品" />
 
-                <Button
-                    android:id="@+id/score"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:text="評價" />
+                    <Button
+                        android:id="@+id/chat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="聊天室" />
 
-                <Button
-                    android:id="@+id/system_function"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:text="系統功能" />
+                    <Button
+                        android:id="@+id/score"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="評價" />
 
-                <Button
-                    android:id="@+id/error_report"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:text="錯誤回報" />
+                    <Button
+                        android:id="@+id/system_function"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="系統功能/聯絡我們" />
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="提醒" />
+
+                    <Button
+                        android:id="@+id/error_report"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="系統功能/錯誤回報" />
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="設定" />
+
+                    <Button
+                        android:id="@+id/OwnPage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFB2ABAD"
+                        android:text="個人商品"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
             </LinearLayout>
-
-            <Button
-                android:id="@+id/OwnPage"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#D0D5DB"
-                android:text="個人商品"
-                android:textSize="18sp" />
-        </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
 
     </LinearLayout>
 </LinearLayout>

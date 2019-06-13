@@ -3,7 +3,6 @@ package com.example.FJU_Store;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -38,12 +37,11 @@ public class create_product_2 extends AppCompatActivity implements CompoundButto
                     msg+=chk.getText();
                 }
                 Intent intent =new Intent(create_product_2.this,create_product_3.class);
-//                Product_w product = new Product_w();
-//                product_data.getProduct_main();
-//                product.setProduct_main("書籍類");
-                product_data.setProduct_sub_1(msg);
-                intent.putExtra("product_data",product_data);
-                Log.v("MAIL",product_data.getSeller_email());
+                Product_w product = new Product_w();
+                product_data.getProduct_main();
+                product.setProduct_main("書籍類");
+                product.setProduct_sub_1(msg);
+                intent.putExtra("product_data",product);
 
 
                 startActivity(intent);
@@ -67,4 +65,7 @@ public class create_product_2 extends AppCompatActivity implements CompoundButto
             selected.remove(buttonView);
         }
     }
+
+
+
 }

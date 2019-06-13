@@ -56,17 +56,19 @@
         android:layout_height="0dp"
         android:layout_marginBottom="24dp"
         android:hint="請輸入您對此訂單的評價"
-        app:layout_constraintBottom_toTopOf="@+id/button16"
+        app:layout_constraintBottom_toTopOf="@+id/goto_index"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
 
     <Button
-        android:id="@+id/button16"
+        android:id="@+id/goto_index"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="86dp"
+        android:background="#26A69A"
         android:text="完成送出"
+        android:textColor="#DEEBDE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

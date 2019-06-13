@@ -15,7 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CateActivity"></activity>
+        <activity android:name=".Wish_dateActivity"></activity>
+        <activity android:name=".uploadActivity" />
+        <activity android:name=".CateActivity" />
         <activity android:name=".EachSubActivity" /> <!-- 陳致宇:accept_order -->
         <activity android:name=".accept_orderActivity" />
         <activity android:name=".OrderActivity" />
@@ -25,6 +27,9 @@
         <activity
             android:name=".notification1"
             android:label="通知" />
+        <activity
+            android:name=".all_take_order"
+            android:label="下單商品" />
         <activity
             android:name=".inquire_evaluation1"
             android:label="評價總攬" />

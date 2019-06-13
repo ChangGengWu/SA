@@ -81,10 +81,11 @@ Button upload_btn;
         p_detail.setText(P_detail);
         p_level.setText(P_level);
         p_restrict.setText(P_restrict);
-        product_data.setSeller_email("test_fake@gmail.com");
+        //product_data.setSeller_email("test_fake@gmail.com");
         sub_text = product_data.getProduct_sub_1();//取得子類別中文
         sub_id = returnSubID(sub_text);
-        seller[0] = product_data.getSeller_email();
+        String mail = Buyer_info.mail;
+        seller[0] = mail;
         sub[0] = sub_id;
 
 
@@ -98,6 +99,8 @@ Button upload_btn;
                     public void onResponse(Call<product_Res> call, Response<product_Res> response) {
                         product_Res res = response.body();
                         Toast.makeText(create_product_makesure.this,"上架成功",Toast.LENGTH_LONG).show();
+                        Intent toupload = new Intent(create_product_makesure.this,uploadActivity.class);
+                        startActivity(toupload);
                         Log.e("PostTest",response.raw()+"");
                     }
 

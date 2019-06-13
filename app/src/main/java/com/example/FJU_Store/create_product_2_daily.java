@@ -1,15 +1,15 @@
 package com.example.FJU_Store;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class create_product_2_daily extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener, TextWatcher {
 
@@ -37,20 +37,24 @@ public class create_product_2_daily extends AppCompatActivity implements RadioGr
 
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int count) {
-
+        //Toast.makeText(create_product_2_daily.this, "請選擇一個類別!", Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void afterTextChanged(Editable s) {
         choose();
+        //Toast.makeText(create_product_2_daily.this, "請選擇一個類別!", Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
         choose();
+        //Toast.makeText(create_product_2_daily.this, "請選擇一個類別!", Toast.LENGTH_LONG).show();
     }
 
     protected void choose() {
+
+
          if (daily_category.getCheckedRadioButtonId() == R.id.daily_shower) {
 
             Button next_daily = findViewById(R.id.next_daily);
@@ -146,6 +150,9 @@ public class create_product_2_daily extends AppCompatActivity implements RadioGr
                 }
             });
         }
+         else{
+             Toast.makeText(create_product_2_daily.this, "請選擇一個類別!", Toast.LENGTH_LONG).show();
+         }
 
     }
 

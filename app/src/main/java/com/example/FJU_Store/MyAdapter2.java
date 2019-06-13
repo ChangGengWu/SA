@@ -72,7 +72,7 @@ public class MyAdapter2 extends RecyclerView.Adapter<MyAdapter2.ViewHolder>
 
                     map.put("api_key", Config.API_KEY);
                     map.put("view", "Grid%20view");
-                    map.put("pageSize", "10");
+                    map.put("pageSize", "70");
 
                     Call<order_ListRes> call = api.getOrder(map);
 

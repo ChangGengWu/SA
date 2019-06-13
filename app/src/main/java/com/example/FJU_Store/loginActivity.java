@@ -33,7 +33,7 @@ public class loginActivity extends AppCompatActivity {
         Map<String, String> map = new HashMap<>();
         map.put("api_key", Config.API_KEY);
         map.put("view", "Grid%20view");
-        map.put("pageSize", "50");
+        map.put("pageSize", "100");
         final Call<ListRes> call = api.getUser(map);
 
         Button btn_login = findViewById(R.id.login);

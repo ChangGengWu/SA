@@ -59,7 +59,7 @@ public class IndexActivity extends AppCompatActivity
         collapsingToolbarLayout.setTitle("輔大二手商城");
         collapsingToolbarLayout.setCollapsedTitleTextColor(Color.BLACK);
         collapsingToolbarLayout.setExpandedTitleColor(Color.BLACK);
-        iv.setImageResource(R.drawable.iv);//iv
+        iv.setImageResource(R.drawable.wallpaper);//iv
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -138,6 +138,8 @@ public class IndexActivity extends AppCompatActivity
             public void onClick(View v){
 
                 Intent upload = new Intent(IndexActivity.this,create_product_1.class);
+                Buyer_info info3 = new Buyer_info();
+                info3.mail = getmail;
                 upload.putExtra("mail",getmail);
                 startActivity(upload);
             }
@@ -153,6 +155,25 @@ public class IndexActivity extends AppCompatActivity
             }
         });
 
+        Button seller = findViewById(R.id.seller);
+        seller.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toSeller = new Intent(IndexActivity.this,uploadActivity.class);
+                Buyer_info info2 = new Buyer_info();
+                info2.mail = getmail;
+                startActivity(toSeller);
+            }
+        });
+
+        Button buyer = findViewById(R.id.buyer);
+        buyer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toBuyer = new Intent(IndexActivity.this,order_record.class);
+                startActivity(toBuyer);
+            }
+        });
         //使用 .OrderActivity
         Button  toOrder = findViewById(R.id.OwnPage);
         toOrder.setOnClickListener(new View.OnClickListener() {

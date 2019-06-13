@@ -5,7 +5,9 @@ import java.util.Map;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.PATCH;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 import retrofit2.http.QueryMap;
 
 public interface order_API {
@@ -14,4 +16,7 @@ public interface order_API {
 
     @POST("Order?api_key=keySEVC5l6huQZqzW")
     Call<order_Res> postOrder(@Body order_Req req);
+
+    @PATCH("Order/{id}?api_key=keySEVC5l6huQZqzW")
+    Call<order_Res> updateOrder(@Path("id") String id, @Body order_Req req);
 }

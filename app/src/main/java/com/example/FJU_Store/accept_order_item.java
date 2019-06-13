@@ -4,8 +4,7 @@ public class accept_order_item {
     private int imageResId;
     private String account;
 
-    public accept_order_item(int imageResId, String account) {
-        this.imageResId = imageResId;
+    public accept_order_item(String account) {
         this.account = account;
     }
 

@@ -6,6 +6,14 @@ public class Order {
     private String order_status;
     private String[] order_buyer;
     private String wish_date;
+    private String[] buyer_name;
+    private String[] ordered_p_id;
+
+    public Order(String order_status,String wish_date) {
+        this.order_status = order_status;
+        this.wish_date = wish_date;
+    }
+
 
     public Order(String[] ordered_product_id,String order_status,String[] order_buyer) {
         this.ordered_product_id = ordered_product_id;
@@ -51,5 +59,21 @@ public class Order {
 
     public void setWish_date(String wish_date) {
         this.wish_date = wish_date;
+    }
+
+    public String[] getBuyer_name() {
+        return buyer_name;
+    }
+
+    public void setBuyer_name(String[] buyer_name) {
+        this.buyer_name = buyer_name;
+    }
+
+    public String[] getOrdered_p_id() {
+        return ordered_p_id;
+    }
+
+    public void setOrdered_p_id(String[] ordered_p_id) {
+        this.ordered_p_id = ordered_p_id;
     }
 }
