@@ -3,7 +3,6 @@ package com.example.FJU_Store;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -20,7 +19,7 @@ public class Catagory_Activity extends AppCompatActivity {
 
         Intent getmail = getIntent();
         final Buyer_info info2 = (Buyer_info) getmail.getSerializableExtra("mail");
-        Log.v("m",info2.mail);
+        //Log.v("m",info2.mail);
 //        String M = info2.info.getUser_mail();
 //        Log.v("mmm",M);
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

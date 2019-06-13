@@ -1,11 +1,14 @@
 package com.example.FJU_Store;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -25,6 +28,16 @@ public class uploadActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload);
         RecyclerView recyclerView;
+
+        Button home = findViewById(R.id.uHome);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent home = new Intent(uploadActivity.this,IndexActivity.class);
+                startActivity(home);
+            }
+        });
+
 
 
 //        for(int i = 0; i < 10; i++)
